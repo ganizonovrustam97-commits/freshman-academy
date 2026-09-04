@@ -722,3 +722,44 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 .footer-contacts a{color:var(--gold);text-decoration:none;font-weight:600;}
 .footer-contacts a:hover{text-decoration:underline;}
 .footer-contacts span{opacity:.7;}
+
+/* ============================================================
+   BACKGROUND PHOTOGRAPHY — third plane, deliberately quiet
+   ============================================================ */
+.bg-photo{position:relative;isolation:isolate;}
+.bg-photo::before{
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-position:center;background-size:cover;background-repeat:no-repeat;
+  opacity:.05;filter:grayscale(.7) blur(3px) contrast(.85);transform:scale(1.08);
+  -webkit-mask-image:linear-gradient(180deg, transparent 0%, #000 22%, #000 68%, transparent 100%);
+          mask-image:linear-gradient(180deg, transparent 0%, #000 22%, #000 68%, transparent 100%);
+}
+.bg-letters::before{background-image:url('../media/bg/letters.jpg');}
+.bg-columbia::before{background-image:url('../media/bg/columbia.jpg');background-position:center 30%;}
+.bg-wharton::before{background-image:url('../media/bg/wharton.jpg');}
+.bg-upenn::before{background-image:url('../media/bg/upenn.jpg');background-position:center 40%;}
+.bg-stanford::before{background-image:url('../media/bg/stanford.jpg');}
+.bg-mit::before{background-image:url('../media/bg/mit.jpg');background-position:center 35%;}
+
+/* On the dark hero the photo sits inside the navy gradient */
+#hero .hero-photo{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:url('../media/bg/letters.jpg') center/cover no-repeat;
+  opacity:.07;filter:grayscale(.55) blur(5px);transform:scale(1.1);
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 70% 40%, #000 0%, transparent 75%);
+          mask-image:radial-gradient(ellipse 80% 70% at 70% 40%, #000 0%, transparent 75%);
+}
+#hero .container{position:relative;z-index:2;}
+#hero .hero-shield{z-index:1;}
+
+/* Dark CTA panels get a faint campus behind the gradient */
+.research-cta{position:relative;overflow:hidden;isolation:isolate;}
+.research-cta::after{
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:url('../media/bg/mit.jpg') center 35%/cover no-repeat;
+  opacity:.12;filter:grayscale(.6) blur(4px);transform:scale(1.08);
+}
+@media(max-width:700px){
+  .bg-photo::before{opacity:.035;}
+  #hero .hero-photo{opacity:.05;}
+}
