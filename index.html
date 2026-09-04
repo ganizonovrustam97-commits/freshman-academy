@@ -466,9 +466,14 @@ table.kp-table td.price{font-weight:700;color:var(--navy);white-space:nowrap;}
 .mentor-uni{color:var(--muted);font-size:.84rem;margin-top:.6rem;}
 
 /* Research */
-.research-flagship{display:grid;grid-template-columns:340px 1fr;gap:0;background:#fff;border:1px solid var(--border);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-md);margin-bottom:2.6rem;}
+.research-case{display:grid;grid-template-columns:340px 1fr;gap:0;background:#fff;border:1px solid var(--border);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-md);}
+.research-case + .research-case{margin-top:1.8rem;}
+.research-cases{margin-bottom:2.6rem;}
 .research-photo{overflow:hidden;min-height:100%;}
 .research-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.research-avatar{width:100%;height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;background:linear-gradient(150deg,var(--navy),var(--navy-dark));position:relative;}
+.research-avatar::before{content:'';position:absolute;inset:0;opacity:.5;background-image:radial-gradient(circle at 30% 20%, rgba(255,147,0,.35), transparent 55%);}
+.research-avatar span{font-family:var(--serif);font-size:4.2rem;font-weight:600;color:var(--gold);position:relative;}
 .research-body{padding:2.6rem 2.8rem;}
 .research-badge{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-pale);padding:.35rem .8rem;border-radius:100px;margin-bottom:1rem;}
 .research-body h3{margin-bottom:.35rem;}
@@ -483,7 +488,7 @@ table.kp-table td.price{font-weight:700;color:var(--navy);white-space:nowrap;}
 .research-cta p{color:rgba(255,255,255,.78);max-width:520px;margin:0 auto 1.6rem;}
 .research-cta .btn-group{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;}
 
-@media(max-width:900px){.support-grid{grid-template-columns:1fr;}.mentor-grid{grid-template-columns:1fr;max-width:360px;margin:0 auto;}.research-flagship{grid-template-columns:1fr;}.research-photo{height:280px;}.research-steps{grid-template-columns:1fr;}}
+@media(max-width:900px){.support-grid{grid-template-columns:1fr;}.mentor-grid{grid-template-columns:1fr;max-width:360px;margin:0 auto;}.research-case{grid-template-columns:1fr;}.research-photo{height:280px;}.research-steps{grid-template-columns:1fr;}}
 
 /* ============================================================
    SCHEDULE
@@ -1230,16 +1235,31 @@ footer a:hover{color:var(--gold);}
       <p>Отдельная программа для тех, кто хочет не только сдать экзамен, а провести настоящее исследование — с научным наставником, собственными данными и работой уровня университетского research paper. Это направление усиливает заявку значительно сильнее, чем ещё один тестовый балл.</p>
     </div>
 
-    <div class="research-flagship fade-up">
-      <div class="research-photo"><img src="media/research/ismoil-makhamadjonov.jpg" alt="Исмоил Махамаджонов" loading="lazy"/></div>
-      <div class="research-body">
-        <div class="research-badge">Кейс Research Institute</div>
-        <h3>Исмоил Махамаджонов</h3>
-        <div class="research-meta">Золотая медаль Singapore International Math Olympiad Challenge (SIMOC) · исследование фармацевтической отрасли Узбекистана</div>
-        <p>В рамках Freshman Research Institute Исмоил вместе с наставниками — Nigel Li, Amirbek Baxshilloyev и Kirill Ilin — изучает, как недавние реформы в фармацевтической отрасли повлияли на доступность лекарств в Узбекистане. Тема выросла из личного опыта: он вырос среди людей, связанных с фармацевтикой, и с детства бывал на местных производствах.</p>
-        <blockquote>«Тогда я наблюдал за индустрией со стороны. Сейчас я сам работаю в этой сфере и захотел разобраться в ней глубже, чем это возможно снаружи — через собственный анализ данных».</blockquote>
-        <p>На данный момент Исмоил собрал статистические данные по теме и готовится к их подробному анализу — следующему шагу перед выводами исследования.</p>
-        <blockquote>«Я понял, насколько важны ведение записей, методология и точно поставленный исследовательский вопрос. На первый взгляд это мелочи, но именно к ним возвращаешься в первую очередь, когда упираешься в стену».</blockquote>
+    <div class="research-cases">
+      <div class="research-case fade-up">
+        <div class="research-photo"><img src="media/research/ismoil-makhamadjonov.jpg" alt="Исмоил Махамаджонов" loading="lazy"/></div>
+        <div class="research-body">
+          <div class="research-badge">Кейс Research Institute</div>
+          <h3>Исмоил Махамаджонов</h3>
+          <div class="research-meta">Золотая медаль Singapore International Math Olympiad Challenge (SIMOC) · исследование фармацевтической отрасли Узбекистана</div>
+          <p>В рамках Freshman Research Institute Исмоил вместе с наставниками — Nigel Li, Amirbek Baxshilloyev и Kirill Ilin — изучает, как недавние реформы в фармацевтической отрасли повлияли на доступность лекарств в Узбекистане. Тема выросла из личного опыта: он вырос среди людей, связанных с фармацевтикой, и с детства бывал на местных производствах.</p>
+          <blockquote>«Тогда я наблюдал за индустрией со стороны. Сейчас я сам работаю в этой сфере и захотел разобраться в ней глубже, чем это возможно снаружи — через собственный анализ данных».</blockquote>
+          <p>На данный момент Исмоил собрал статистические данные по теме и готовится к их подробному анализу — следующему шагу перед выводами исследования.</p>
+          <blockquote>«Я понял, насколько важны ведение записей, методология и точно поставленный исследовательский вопрос. На первый взгляд это мелочи, но именно к ним возвращаешься в первую очередь, когда упираешься в стену».</blockquote>
+        </div>
+      </div>
+
+      <div class="research-case fade-up">
+        <div class="research-photo"><div class="research-avatar"><span>А</span></div></div>
+        <div class="research-body">
+          <div class="research-badge">Кейс Research Institute</div>
+          <h3>Амир Османалиев</h3>
+          <div class="research-meta">Прогнозирование качества воздуха в Бишкеке · модель машинного обучения для PM2.5</div>
+          <p>Вместе с наставниками — Nigel Li, Amirbek Baxshilloyev и Kirill Ilin — Амир строит ML-модель, которая прогнозирует опасный уровень загрязнения воздуха (PM2.5) в Кыргызстане. Тема выросла из личных наблюдений за смогом в родном Кара-Балте — Амир хотел понять, можно ли эту проблему не просто видеть, а измерить и предсказать.</p>
+          <blockquote>«Последние несколько зим в Кара-Балте я замечал, каким серым становится воздух, как куртка пахнет дымом после короткой прогулки, и как с холмов видно тёмное облако над городом. Я хотел понять, можно ли эту проблему измерить и спрогнозировать — и помочь своему городу, чем смогу».</blockquote>
+          <p>За время программы Амир научился критически читать научные статьи и отличать обоснованные выводы от слабых — и относиться к пересмотру своей работы как к нормальной части исследования, а не как к ошибке.</p>
+          <blockquote>«Главный навык — это много и внимательно читать. Я разобрал десятки научных статей и учился отличать, где вывод обоснован, а где нет, вместо того чтобы доверять всему подряд. Со временем я понял: готовность постоянно дорабатывать работу полезнее, чем стремление сразу сделать всё правильно».</blockquote>
+        </div>
       </div>
     </div>
 
