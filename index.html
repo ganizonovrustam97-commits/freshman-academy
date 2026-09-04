@@ -465,7 +465,25 @@ table.kp-table td.price{font-weight:700;color:var(--navy);white-space:nowrap;}
 .mentor-role{color:var(--gold-dark);font-size:.82rem;font-weight:600;letter-spacing:.03em;}
 .mentor-uni{color:var(--muted);font-size:.84rem;margin-top:.6rem;}
 
-@media(max-width:900px){.support-grid{grid-template-columns:1fr;}.mentor-grid{grid-template-columns:1fr;max-width:360px;margin:0 auto;}}
+/* Research */
+.research-flagship{display:grid;grid-template-columns:340px 1fr;gap:0;background:#fff;border:1px solid var(--border);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-md);margin-bottom:2.6rem;}
+.research-photo{overflow:hidden;min-height:100%;}
+.research-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.research-body{padding:2.6rem 2.8rem;}
+.research-badge{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-pale);padding:.35rem .8rem;border-radius:100px;margin-bottom:1rem;}
+.research-body h3{margin-bottom:.35rem;}
+.research-meta{color:var(--muted);font-size:.86rem;font-weight:600;margin-bottom:1.2rem;line-height:1.5;}
+.research-body p{font-size:.94rem;margin-bottom:1.1rem;}
+.research-body blockquote{margin:0 0 1.1rem;padding:.9rem 1.3rem;border-left:3px solid var(--gold);background:var(--gold-pale);border-radius:0 8px 8px 0;font-family:var(--serif);font-style:italic;font-size:.98rem;color:var(--navy-dark);line-height:1.6;}
+.research-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-bottom:3rem;}
+.research-step{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.8rem;}
+.research-step .journey-num{margin-bottom:.7rem;}
+.research-cta{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-dark) 100%);border-radius:18px;padding:2.6rem;text-align:center;color:#fff;}
+.research-cta h3{color:#fff;margin-bottom:.6rem;}
+.research-cta p{color:rgba(255,255,255,.78);max-width:520px;margin:0 auto 1.6rem;}
+.research-cta .btn-group{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;}
+
+@media(max-width:900px){.support-grid{grid-template-columns:1fr;}.mentor-grid{grid-template-columns:1fr;max-width:360px;margin:0 auto;}.research-flagship{grid-template-columns:1fr;}.research-photo{height:280px;}.research-steps{grid-template-columns:1fr;}}
 
 /* ============================================================
    SCHEDULE
@@ -643,6 +661,7 @@ footer a:hover{color:var(--gold);}
       <li><a href="#teachers">Преподаватели</a></li>
       <li><a href="#sat">SAT</a></li>
       <li><a href="#ap">AP</a></li>
+      <li><a href="#research">Исследования</a></li>
       <li><a href="#support">Сопровождение</a></li>
       <li><a href="#schedule">Расписание</a></li>
       <li><a href="#pricing">Цены</a></li>
@@ -663,6 +682,7 @@ footer a:hover{color:var(--gold);}
   <a href="#teachers" onclick="closeMobileMenu()">Преподаватели</a>
   <a href="#sat" onclick="closeMobileMenu()">SAT</a>
   <a href="#ap" onclick="closeMobileMenu()">AP</a>
+  <a href="#research" onclick="closeMobileMenu()">Исследования</a>
   <a href="#support" onclick="closeMobileMenu()">Сопровождение</a>
   <a href="#schedule" onclick="closeMobileMenu()">Расписание</a>
   <a href="#pricing" onclick="closeMobileMenu()">Цены</a>
@@ -1194,6 +1214,60 @@ footer a:hover{color:var(--gold);}
     <div class="ap-pricing fade-up">
       <div class="ap-price-box"><div><strong>$99</strong><span>1 предмет / месяц</span></div></div>
       <div class="ap-price-box" style="border-color:var(--gold);"><div><strong>$180</strong><span>3 предмета / месяц</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RESEARCH PROGRAM
+     ============================================================ -->
+<section id="research" class="alt">
+  <div class="container">
+    <div class="section-header center fade-up" style="margin-left:auto;margin-right:auto;">
+      <div class="label" style="justify-content:center;width:100%;">Freshman Research Institute</div>
+      <div class="gold-line" style="margin-left:auto;margin-right:auto;"></div>
+      <h2>Проекты и исследования студентов</h2>
+      <p>Отдельная программа для тех, кто хочет не только сдать экзамен, а провести настоящее исследование — с научным наставником, собственными данными и работой уровня университетского research paper. Это направление усиливает заявку значительно сильнее, чем ещё один тестовый балл.</p>
+    </div>
+
+    <div class="research-flagship fade-up">
+      <div class="research-photo"><img src="media/research/ismoil-makhamadjonov.jpg" alt="Исмоил Махамаджонов" loading="lazy"/></div>
+      <div class="research-body">
+        <div class="research-badge">Кейс Research Institute</div>
+        <h3>Исмоил Махамаджонов</h3>
+        <div class="research-meta">Золотая медаль Singapore International Math Olympiad Challenge (SIMOC) · исследование фармацевтической отрасли Узбекистана</div>
+        <p>В рамках Freshman Research Institute Исмоил вместе с наставниками — Nigel Li, Amirbek Baxshilloyev и Kirill Ilin — изучает, как недавние реформы в фармацевтической отрасли повлияли на доступность лекарств в Узбекистане. Тема выросла из личного опыта: он вырос среди людей, связанных с фармацевтикой, и с детства бывал на местных производствах.</p>
+        <blockquote>«Тогда я наблюдал за индустрией со стороны. Сейчас я сам работаю в этой сфере и захотел разобраться в ней глубже, чем это возможно снаружи — через собственный анализ данных».</blockquote>
+        <p>На данный момент Исмоил собрал статистические данные по теме и готовится к их подробному анализу — следующему шагу перед выводами исследования.</p>
+        <blockquote>«Я понял, насколько важны ведение записей, методология и точно поставленный исследовательский вопрос. На первый взгляд это мелочи, но именно к ним возвращаешься в первую очередь, когда упираешься в стену».</blockquote>
+      </div>
+    </div>
+
+    <div class="research-steps fade-up">
+      <div class="research-step">
+        <div class="journey-num">01</div>
+        <h3>Исследовательский вопрос</h3>
+        <p>Студент вместе с наставником формулирует тему и вопрос, который можно проверить данными — от идеи до чёткой методологии.</p>
+      </div>
+      <div class="research-step">
+        <div class="journey-num">02</div>
+        <h3>Сбор данных</h3>
+        <p>Работа с источниками и статистикой по теме, системное ведение записей — основа, на которой строится весь дальнейший анализ.</p>
+      </div>
+      <div class="research-step">
+        <div class="journey-num">03</div>
+        <h3>Анализ и выводы</h3>
+        <p>Разбор собранных данных под руководством наставника и оформление результатов в работу уровня университетского исследования.</p>
+      </div>
+    </div>
+
+    <div class="research-cta fade-up">
+      <h3>Есть идея для своего исследования?</h3>
+      <p>Расскажите, какая тема вам интересна — подберём направление и наставника в Freshman Research Institute, среди таких же увлечённых студентов.</p>
+      <div class="btn-group">
+        <a href="#builder" class="btn btn-gold">Собрать программу</a>
+        <a href="#contact" class="btn btn-outline">Обсудить идею</a>
+      </div>
     </div>
   </div>
 </section>
