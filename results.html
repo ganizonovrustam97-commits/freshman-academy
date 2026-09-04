@@ -19,7 +19,7 @@
       <a href="support.html" class="np">Сопровождение</a>
       <a href="results.html" class="np active">Результаты</a>
       <a href="builder.html" class="np">Конструктор</a>
-      <a href="#contact" class="np">Контакты</a>
+      <a href="https://t.me/freshman_academy" target="_blank" rel="noopener" class="np">Контакты</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
   </div>
@@ -35,8 +35,140 @@
   <a href="support.html" onclick="closeMobileMenu()">Сопровождение</a>
   <a href="results.html" onclick="closeMobileMenu()">Результаты</a>
   <a href="builder.html" onclick="closeMobileMenu()">Конструктор</a>
-  <a href="#contact" onclick="closeMobileMenu()">Контакты</a>
-  <a href="#contact" class="btn btn-gold" onclick="closeMobileMenu()">Записаться</a>
+  <a href="https://t.me/freshman_academy" target="_blank" rel="noopener" onclick="closeMobileMenu()">Контакты</a>
+  <a href="https://t.me/freshman_academy" target="_blank" rel="noopener" class="btn btn-gold" onclick="closeMobileMenu()">Записаться</a>
 </div>
 
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs fade-up"><a href="index.html">Главная</a> / Результаты</div>
+    <h1 class="fade-up">Результаты студентов</h1>
+    <p class="fade-up d1">Реальные офферы и стипендии — из социальных сетей и архива команды.</p>
+  </div>
+</section>
+<section id="results" class="alt">
+  <div class="container">
+    <div class="section-header center fade-up" style="margin-left:auto;margin-right:auto;">
+      <div class="label" style="justify-content:center;width:100%;">Результаты</div>
+      <div class="gold-line" style="margin-left:auto;margin-right:auto;"></div>
+      <h2>От Ташкента до Топ-30 университетов мира</h2>
+      <p>Каждый оффер ниже — реальный студент Freshman и подтверждённое поступление. Больше историй — в галерее ниже.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card fade-up">
+        <div class="ru-tag">Оффер</div>
+        <div class="ru-uni">Harvard University</div>
+        <div class="ru-amt">Поступление</div>
+        <div class="ru-name">Азизбек</div>
+      </div>
+      <div class="result-card fade-up d1">
+        <div class="ru-tag">Оффер · стипендия</div>
+        <div class="ru-uni">Wharton (UPenn)</div>
+        <div class="ru-amt">$400,000+</div>
+        <div class="ru-name">Мадина</div>
+      </div>
+      <div class="result-card fade-up d2">
+        <div class="ru-tag">Оффер · стипендия</div>
+        <div class="ru-uni">Duke University</div>
+        <div class="ru-amt">$428,000</div>
+        <div class="ru-name">Фариза</div>
+      </div>
+      <div class="result-card fade-up">
+        <div class="ru-tag">Оффер · стипендия</div>
+        <div class="ru-uni">Cornell University</div>
+        <div class="ru-amt">$408,172</div>
+        <div class="ru-name">Жавохир</div>
+      </div>
+      <div class="result-card fade-up d1">
+        <div class="ru-tag">Оффер</div>
+        <div class="ru-uni">Stanford University</div>
+        <div class="ru-amt">Поступление</div>
+        <div class="ru-name">Алишер</div>
+      </div>
+      <div class="result-card fade-up d2">
+        <div class="ru-tag">Оффер</div>
+        <div class="ru-uni">Columbia University</div>
+        <div class="ru-amt">Поступление</div>
+        <div class="ru-name">Марифат</div>
+      </div>
+    </div>
+    <div class="results-more fade-up">
+      <a href="#gallery" class="btn btn-outline-navy">Смотреть все результаты
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="achv" style="padding:3.6rem 0;">
+  <div class="container achv-grid">
+    <div class="achv-item fade-up"><strong>$4,000,000+</strong><span>в стипендиях Ivy League</span></div>
+    <div class="achv-item fade-up d1"><strong>700+</strong><span>выпускников по всему миру</span></div>
+    <div class="achv-item fade-up d2"><strong>7 лет</strong><span>опыта в admissions</span></div>
+    <div class="achv-item fade-up d3"><strong>1000+</strong><span>студентов поддержано бесплатно</span></div>
+  </div>
+</section>
+<section id="gallery">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="label">Галерея</div>
+      <div class="gold-line"></div>
+      <h2>Результаты наших студентов</h2>
+      <p style="margin-top:1rem;max-width:560px;">Реальные офферы студентов Freshman — из социальных сетей и архива команды.</p>
+    </div>
+
+    <div class="gallery-filters fade-up">
+      <button class="gf-btn active" data-filter="all">Все</button>
+      <button class="gf-btn" data-filter="results">Результаты</button>
+      <button class="gf-btn" data-filter="video">Видео</button>
+    </div>
+
+    <div class="gallery-masonry fade-up" id="galleryGrid">
+      <div class="gal-item" data-cat="results" onclick="openLightbox(0)"><img src="media/results/r01-harvard-azizbek.jpg" alt="Азизбек — Harvard" loading="lazy"/><div class="gal-overlay"><div class="gal-cat">Результат</div><div class="gal-caption">Азизбек — Harvard</div></div></div>
+      <div class="gal-item" data-cat="results" onclick="openLightbox(1)"><img src="media/results/r02-upenn-370k.jpg" alt="UPenn — стипендия $370,000" loading="lazy"/><div class="gal-overlay"><div class="gal-cat">Результат</div><div class="gal-caption">UPenn — стипендия $370,000</div></div></div>
+      <div class="gal-item" data-cat="results" onclick="openLightbox(2)"><img src="media/results/r03-nyuad-behruz-240k.jpg" alt="Бехруз — NYU Abu Dhabi, $240,000" loading="lazy"/><div class="gal-overlay"><div class="gal-cat">Результат</div><div class="gal-caption">Бехруз — NYU Abu Dhabi, $240,000</div></div></div>
+      <div class="gal-item" data-cat="results" onclick="openLightbox(3)"><img src="media/results/r04-harvard-dilnozaxon.jpg" alt="Дилнозахон — Harvard" loading="lazy"/><div class="gal-overlay"><div class="gal-cat">Результат</div><div class="gal-caption">Дилнозахон — Harvard</div></div></div>
+      <div class="gal-item" data-cat="results" onclick="openLightbox(4)"><img src="media/results/r05-wharton-madina-400k.jpg" alt="Мадина — Wharton, $400,000+" loading="lazy"/><div class="gal-overlay"><div class="gal-cat">Результат</div><div class="gal-caption">Мадина — Wharton (UPenn), $400,000+</div></div></div>
+      <div class="gal-item" data-cat="results" onclick="openLightbox(5)"><img src="media/results/r06-duke-fariza-428k.jpg" alt="Фариза — Duke, $428,000" loading="lazy"/><div class="gal-overlay"><div class="gal-cat">Результат</div><div class="gal-caption">Фариза — Duke University, $428,000</div></div></div>
+      <div class="gal-item" data-cat="results" onclick="openLightbox(6)"><img src="media/results/r07-columbia-marifat.jpg" alt="Марифат — Columbia" loading="lazy"/><div class="gal-overlay"><div class="gal-cat">Результат</div><div class="gal-caption">Марифат — Columbia University</div></div></div>
+      <div class="gal-item" data-cat="results" onclick="openLightbox(7)"><img src="media/results/r08-cornell-javokhir-408k.jpg" alt="Жавохир — Cornell, $408,172" loading="lazy"/><div class="gal-overlay"><div class="gal-cat">Результат</div><div class="gal-caption">Жавохир — Cornell University, $408,172</div></div></div>
+      <div class="gal-item" data-cat="results" onclick="openLightbox(8)"><img src="media/results/r09-colby-mushtariy-352k.jpg" alt="Муштарий — Colby, $352,000" loading="lazy"/><div class="gal-overlay"><div class="gal-cat">Результат</div><div class="gal-caption">Муштарий — Colby College, $352,000</div></div></div>
+      <div class="gal-item" data-cat="results" onclick="openLightbox(9)"><img src="media/results/r10-nyuad-azimkhon-307k.jpg" alt="Азимхон — NYU Abu Dhabi, $307,000" loading="lazy"/><div class="gal-overlay"><div class="gal-cat">Результат</div><div class="gal-caption">Азимхон — NYU Abu Dhabi, $307,000</div></div></div>
+      <div class="gal-item" data-cat="results" onclick="openLightbox(10)"><img src="media/results/r11-bu-abdurahmon.jpg" alt="Абдурахмон — Boston University" loading="lazy"/><div class="gal-overlay"><div class="gal-cat">Результат</div><div class="gal-caption">Абдурахмон — Boston University</div></div></div>
+      <div class="gal-item" data-cat="results" onclick="openLightbox(11)"><img src="media/results/r12-richmond-364k.jpg" alt="University of Richmond, $364,320" loading="lazy"/><div class="gal-overlay"><div class="gal-cat">Результат</div><div class="gal-caption">University of Richmond — $364,320</div></div></div>
+      <div class="gal-item" data-cat="results" onclick="openLightbox(12)"><img src="media/results/r13-stanford-alisher.jpg" alt="Алишер — Stanford" loading="lazy"/><div class="gal-overlay"><div class="gal-cat">Результат</div><div class="gal-caption">Алишер — Stanford University</div></div></div>
+
+      <div class="gal-item gal-video-item" data-cat="video" data-video="media/video/v01.mp4" onclick="openLightbox(13)"><img src="media/video/v01-poster.jpg" alt="Видео Freshman Academy" loading="lazy"/><div class="gal-play"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--navy)"><path d="M8 5v14l11-7z"/></svg></div><div class="gal-overlay"><div class="gal-cat">Видео</div><div class="gal-caption">История поступления</div></div></div>
+      <div class="gal-item gal-video-item" data-cat="video" data-video="media/video/v02.mp4" onclick="openLightbox(14)"><img src="media/video/v02-poster.jpg" alt="Видео Freshman Academy" loading="lazy"/><div class="gal-play"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--navy)"><path d="M8 5v14l11-7z"/></svg></div><div class="gal-overlay"><div class="gal-cat">Видео</div><div class="gal-caption">История поступления</div></div></div>
+      <div class="gal-item gal-video-item" data-cat="video" data-video="media/video/v03.mp4" onclick="openLightbox(15)"><img src="media/video/v03-poster.jpg" alt="Видео Freshman Academy" loading="lazy"/><div class="gal-play"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--navy)"><path d="M8 5v14l11-7z"/></svg></div><div class="gal-overlay"><div class="gal-cat">Видео</div><div class="gal-caption">История поступления</div></div></div>
+      <div class="gal-item gal-video-item" data-cat="video" data-video="media/video/v04.mp4" onclick="openLightbox(16)"><img src="media/video/v04-poster.jpg" alt="Видео Freshman Academy" loading="lazy"/><div class="gal-play"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--navy)"><path d="M8 5v14l11-7z"/></svg></div><div class="gal-overlay"><div class="gal-cat">Видео</div><div class="gal-caption">История поступления</div></div></div>
+      <div class="gal-item gal-video-item" data-cat="video" data-video="media/video/v05.mp4" onclick="openLightbox(17)"><img src="media/video/v05-poster.jpg" alt="Видео Freshman Academy" loading="lazy"/><div class="gal-play"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--navy)"><path d="M8 5v14l11-7z"/></svg></div><div class="gal-overlay"><div class="gal-cat">Видео</div><div class="gal-caption">История поступления</div></div></div>
+      <div class="gal-item gal-video-item" data-cat="video" data-video="media/video/v06.mp4" onclick="openLightbox(18)"><img src="media/video/v06-poster.jpg" alt="Видео Freshman Academy" loading="lazy"/><div class="gal-play"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--navy)"><path d="M8 5v14l11-7z"/></svg></div><div class="gal-overlay"><div class="gal-cat">Видео</div><div class="gal-caption">История поступления</div></div></div>
+      <div class="gal-item gal-video-item" data-cat="video" data-video="media/video/v07.mp4" onclick="openLightbox(19)"><img src="media/video/v07-poster.jpg" alt="Видео Freshman Academy" loading="lazy"/><div class="gal-play"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--navy)"><path d="M8 5v14l11-7z"/></svg></div><div class="gal-overlay"><div class="gal-cat">Видео</div><div class="gal-caption">История поступления</div></div></div>
+      <div class="gal-item gal-video-item" data-cat="video" data-video="media/video/v08.mp4" onclick="openLightbox(20)"><img src="media/video/v08-poster.jpg" alt="Видео Freshman Academy" loading="lazy"/><div class="gal-play"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--navy)"><path d="M8 5v14l11-7z"/></svg></div><div class="gal-overlay"><div class="gal-cat">Видео</div><div class="gal-caption">История поступления</div></div></div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-badge"></span>
+      <span>Freshman Academy</span>
+    </div>
+    <div class="footer-contacts">
+      <a href="https://t.me/freshman_academy" target="_blank" rel="noopener">Telegram @freshman_academy</a>
+      <a href="https://wa.me/998000000000" target="_blank" rel="noopener">WhatsApp</a>
+      <span>Офлайн (Ташкент) и онлайн</span>
+    </div>
+    <div>© 2026 Freshman Academy · Freshman Pte. Ltd. (202307332W)</div>
+    <div><a href="#navbar">Наверх ↑</a></div>
+  </div>
+</footer>
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lightbox-close" id="lbClose">&#215;</button>
+  <button class="lightbox-nav" id="lbPrev">&#8249;</button>
+  <img class="lightbox-img" id="lbImg" src="" alt=""/>
+  <video class="lightbox-video" id="lbVideo" style="display:none;" controls playsinline></video>
+  <button class="lightbox-nav" id="lbNext">&#8250;</button>
+  <div class="lightbox-caption" id="lbCaption"></div>
+</div>
 <script src="assets/app.js"></script>

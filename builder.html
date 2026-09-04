@@ -19,7 +19,7 @@
       <a href="support.html" class="np">Сопровождение</a>
       <a href="results.html" class="np">Результаты</a>
       <a href="builder.html" class="np active">Конструктор</a>
-      <a href="#contact" class="np">Контакты</a>
+      <a href="https://t.me/freshman_academy" target="_blank" rel="noopener" class="np">Контакты</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
   </div>
@@ -35,8 +35,247 @@
   <a href="support.html" onclick="closeMobileMenu()">Сопровождение</a>
   <a href="results.html" onclick="closeMobileMenu()">Результаты</a>
   <a href="builder.html" onclick="closeMobileMenu()">Конструктор</a>
-  <a href="#contact" onclick="closeMobileMenu()">Контакты</a>
-  <a href="#contact" class="btn btn-gold" onclick="closeMobileMenu()">Записаться</a>
+  <a href="https://t.me/freshman_academy" target="_blank" rel="noopener" onclick="closeMobileMenu()">Контакты</a>
+  <a href="https://t.me/freshman_academy" target="_blank" rel="noopener" class="btn btn-gold" onclick="closeMobileMenu()">Записаться</a>
 </div>
 
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs fade-up"><a href="index.html">Главная</a> / Конструктор</div>
+    <h1 class="fade-up">Конструктор программы</h1>
+    <p class="fade-up d1">Ответьте на 5 вопросов — покажем, чего не хватает для заявки, и соберём пакет.</p>
+  </div>
+</section>
+<section id="builder">
+  <div class="container">
+    <div class="section-header center fade-up" style="margin-left:auto;margin-right:auto;">
+      <div class="label" style="justify-content:center;width:100%;">Конструктор программы</div>
+      <div class="gold-line" style="margin-left:auto;margin-right:auto;"></div>
+      <h2>Соберите программу под своего студента</h2>
+      <p>Ответьте на 5 вопросов — покажем, чего не хватает для поступления, и соберём индивидуальный пакет с фиксированной стоимостью.</p>
+    </div>
+
+    <div class="builder-layout fade-up">
+      <div class="builder-panel">
+
+        <!-- ШАГ 1 — профиль -->
+        <div class="bld-step">
+          <div class="bld-step-num"><i>1</i> Профиль студента</div>
+
+          <div class="bp-group">
+            <div class="bp-label">Класс</div>
+            <div class="bp-chips" data-group="grade">
+              <button class="bp-chip" data-value="9">9 класс</button>
+              <button class="bp-chip on" data-value="10">10 класс</button>
+              <button class="bp-chip" data-value="11">11 класс</button>
+              <button class="bp-chip" data-value="grad">Выпускник</button>
+            </div>
+          </div>
+
+          <div class="bp-group">
+            <div class="bp-label">Направление</div>
+            <div class="bp-chips" data-group="field">
+              <button class="bp-chip on" data-value="eng">Инженерия / CS</button>
+              <button class="bp-chip" data-value="biz">Бизнес и экономика</button>
+              <button class="bp-chip" data-value="sci">Естественные науки</button>
+              <button class="bp-chip" data-value="hum">Гуманитарные</button>
+            </div>
+          </div>
+
+          <div class="bp-group">
+            <div class="bp-label">Куда поступает</div>
+            <div class="bp-chips" data-group="country">
+              <button class="bp-chip on" data-value="usa">США</button>
+              <button class="bp-chip" data-value="eu">Европа</button>
+              <button class="bp-chip" data-value="asia">Азия</button>
+              <button class="bp-chip" data-value="none">Ещё не решил</button>
+            </div>
+          </div>
+
+          <div class="bp-group">
+            <div class="bp-label">Уровень английского</div>
+            <div class="bp-chips" data-group="english">
+              <button class="bp-chip" data-value="a2">A2 – B1</button>
+              <button class="bp-chip on" data-value="b2">B2</button>
+              <button class="bp-chip" data-value="c1">C1 и выше</button>
+            </div>
+          </div>
+
+          <div class="bp-group">
+            <div class="bp-label">SAT</div>
+            <div class="bp-chips" data-group="sat">
+              <button class="bp-chip on" data-value="no">Не сдавал</button>
+              <button class="bp-chip" data-value="yes">Сдавал, нужен рост балла</button>
+            </div>
+          </div>
+
+          <div class="bld-actions">
+            <button class="btn btn-navy" id="bldAuto">Подобрать программу
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <button class="btn btn-outline-navy" id="bldReset">Сбросить</button>
+          </div>
+
+          <div class="bld-why" id="bldWhy">
+            <div class="bld-why-title">Почему такой набор</div>
+            <ul id="bldWhyList"></ul>
+          </div>
+        </div>
+
+        <!-- ШАГ 2 — услуги -->
+        <div class="bld-step">
+          <div class="bld-step-num"><i>2</i> Услуги в пакете</div>
+
+          <div class="svc-card" data-svc="sat">
+            <div class="svc-head">
+              <div class="svc-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <div>
+                <div class="svc-title">Подготовка к SAT<span class="svc-rec" data-rec="sat" hidden>Рекомендуем</span></div>
+                <div class="svc-desc">12 занятий в месяц на предмет, офлайн или онлайн</div>
+              </div>
+              <div class="svc-price" data-price="sat">$159<small>в месяц</small></div>
+            </div>
+            <div class="svc-opts">
+              <button class="svc-opt on" data-opt="program" data-value="foundation">Foundation · 1.5 мес</button>
+              <button class="svc-opt" data-opt="program" data-value="advanced">Advanced · 3 мес</button>
+              <button class="svc-opt" data-opt="subjects" data-value="1">1 предмет</button>
+              <button class="svc-opt on" data-opt="subjects" data-value="2">Math + English</button>
+            </div>
+          </div>
+
+          <div class="svc-card" data-svc="ap">
+            <div class="svc-head">
+              <div class="svc-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <div>
+                <div class="svc-title">Курсы AP<span class="svc-rec" data-rec="ap" hidden>Рекомендуем</span></div>
+                <div class="svc-desc">2 занятия в неделю, 3 месяца · ≈24 занятия на предмет</div>
+              </div>
+              <div class="svc-price" data-price="ap">$180<small>в месяц</small></div>
+            </div>
+            <div class="svc-opts">
+              <button class="svc-opt" data-opt="subjects" data-value="1">1 предмет</button>
+              <button class="svc-opt on" data-opt="subjects" data-value="3">3 предмета</button>
+            </div>
+          </div>
+
+          <div class="svc-card" data-svc="research">
+            <div class="svc-head">
+              <div class="svc-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <div>
+                <div class="svc-title">Research Program<span class="svc-rec" data-rec="research" hidden>Рекомендуем</span></div>
+                <div class="svc-desc">Собственный исследовательский проект под руководством ментора</div>
+              </div>
+              <div class="svc-price" data-price="research">$1,050<small>за программу</small></div>
+            </div>
+            <div class="svc-opts">
+              <button class="svc-opt" data-opt="level" data-value="emerging">Emerging · $350</button>
+              <button class="svc-opt on" data-opt="level" data-value="extended">Extended · $1,050</button>
+              <button class="svc-opt" data-opt="level" data-value="advanced">Advanced · $1,250</button>
+              <button class="svc-opt" data-opt="level" data-value="frontiers">Frontiers · $2,450</button>
+              <button class="svc-opt" data-opt="level" data-value="fellowship">Fellowship · $4,050</button>
+              <button class="svc-opt" data-opt="level" data-value="premier">Premier · $8,500</button>
+            </div>
+          </div>
+
+          <div class="svc-card" data-svc="admissions">
+            <div class="svc-head">
+              <div class="svc-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <div>
+                <div class="svc-title">Admissions Program<span class="svc-rec" data-rec="admissions" hidden>Рекомендуем</span></div>
+                <div class="svc-desc">3 месяца, 24 занятия и 19+ часов индивидуальных консультаций</div>
+              </div>
+              <div class="svc-price" data-price="admissions">$2,050<small>за программу</small></div>
+            </div>
+          </div>
+
+          <div class="svc-card" data-svc="essay">
+            <div class="svc-head">
+              <div class="svc-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <div>
+                <div class="svc-title">Essay Program<span class="svc-rec" data-rec="essay" hidden>Рекомендуем</span></div>
+                <div class="svc-desc">Мотивационное и supplemental эссе 1-на-1 с ментором</div>
+              </div>
+              <div class="svc-price" data-price="essay">$650<small>за программу</small></div>
+            </div>
+          </div>
+
+          <div class="svc-card" data-svc="applications">
+            <div class="svc-head">
+              <div class="svc-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <div>
+                <div class="svc-title">Applications Program<span class="svc-rec" data-rec="applications" hidden>Рекомендуем</span></div>
+                <div class="svc-desc">Заполнение и подача заявок, документы, дедлайны, рекомендации</div>
+              </div>
+              <div class="svc-price" data-price="applications">$850<small>за программу</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ИТОГ -->
+      <aside class="bld-summary">
+        <h3>Ваш пакет</h3>
+        <div class="bld-sum-sub" id="bldProfileLine">10 класс · Инженерия · США</div>
+        <ul class="bld-list" id="bldList"></ul>
+        <div class="bld-empty" id="bldEmpty">Выберите услуги слева или нажмите «Подобрать программу».</div>
+        <div class="bld-totals">
+          <div class="bld-trow"><span>Ежемесячно</span><b id="bldMonthly">$0</b></div>
+          <div class="bld-trow"><span>Разово за программы</span><b id="bldOnce">$0</b></div>
+          <div class="bld-trow big"><span>Бюджет целиком</span><b id="bldTotal">$0</b></div>
+        </div>
+        <button class="btn btn-gold btn-block" id="bldKp">Сформировать КП
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 15h6"/></svg>
+        </button>
+        <div class="bld-note">Оплата помесячно по курсам SAT и AP; Research и программы поступления — фиксированная стоимость за программу.</div>
+      </aside>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-badge"></span>
+      <span>Freshman Academy</span>
+    </div>
+    <div class="footer-contacts">
+      <a href="https://t.me/freshman_academy" target="_blank" rel="noopener">Telegram @freshman_academy</a>
+      <a href="https://wa.me/998000000000" target="_blank" rel="noopener">WhatsApp</a>
+      <span>Офлайн (Ташкент) и онлайн</span>
+    </div>
+    <div>© 2026 Freshman Academy · Freshman Pte. Ltd. (202307332W)</div>
+    <div><a href="#navbar">Наверх ↑</a></div>
+  </div>
+</footer>
+<div class="kp-overlay" id="kpModal">
+  <div class="kp-doc">
+    <button class="kp-close" id="kpClose">&#215;</button>
+    <div class="kp-head">
+      <div class="kp-brand">
+        <span class="brand-badge"></span>
+        <span class="kp-brand-name">Freshman Academy<span>SAT &amp; AP Prep</span></span>
+      </div>
+      <div class="kp-meta"><b>Коммерческое предложение</b><span id="kpDate"></span></div>
+    </div>
+    <div class="kp-profile" id="kpProfile"></div>
+    <table class="kp-table">
+      <thead>
+        <tr><th style="width:44%">Услуга</th><th>Формат</th><th>Срок</th><th>Стоимость</th></tr>
+      </thead>
+      <tbody id="kpBody"></tbody>
+    </table>
+    <div class="kp-totals">
+      <div class="kp-trow"><span>Ежемесячные занятия</span><b id="kpMonthly">$0</b></div>
+      <div class="kp-trow"><span>Разовые программы</span><b id="kpOnce">$0</b></div>
+      <div class="kp-trow big"><span>Бюджет программы целиком</span><b id="kpTotal">$0</b></div>
+    </div>
+    <div class="kp-foot">
+      Стоимость курсов SAT и AP указана за месяц обучения на одного студента; Research-программы и программы поступления оплачиваются как фиксированная стоимость за программу. Предложение носит ориентировочный характер — итоговый состав и сроки согласовываются с координатором.<br/>
+      Freshman Pte. Ltd. (202307332W) · Telegram @freshman_academy
+    </div>
+    <div class="kp-actions">
+      <button class="btn btn-navy" id="kpPrint">Печать / Сохранить PDF</button>
+      <button class="btn btn-outline-navy" id="kpCopy">Скопировать текстом</button>
+    </div>
+  </div>
+</div>
 <script src="assets/app.js"></script>
