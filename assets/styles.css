@@ -708,3 +708,12 @@ footer .brand-badge{background-image:url('data:image/png;base64,iVBORw0KGgoAAAAN
 
 /* Burger only where the pill nav is hidden */
 @media(min-width:901px){#navbar .hamburger{display:none;}}
+
+/* Nav floats over the page — no hard band above the hero */
+nav{background:transparent;backdrop-filter:none;border-bottom:none;box-shadow:none;}
+nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(247,249,252,0));backdrop-filter:blur(6px);border-bottom:none;box-shadow:none;}
+#navbar .nav-group{background:rgba(255,255,255,.22);backdrop-filter:blur(10px);}
+#navbar.scrolled .nav-group{background:rgba(255,255,255,.6);}
+#navbar .hamburger span{background:#fff;}
+#navbar.scrolled .hamburger span{background:var(--navy);}
+.page-hero{padding-top:10rem;}
