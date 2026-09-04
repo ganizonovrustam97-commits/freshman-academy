@@ -745,16 +745,6 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 .bg-stanford::before{background-image:url('../media/bg/stanford.jpg');}
 .bg-mit::before{background-image:url('../media/bg/mit.jpg');background-position:center 35%;}
 
-/* On the dark hero the photo sits inside the navy gradient */
-#hero .hero-photo{
-  position:absolute;inset:0;z-index:0;pointer-events:none;
-  background:url('../media/bg/letters.jpg') center/cover no-repeat;
-  opacity:.30;filter:grayscale(.25) blur(1px);transform:scale(1.05);
-  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 70% 40%, #000 0%, transparent 75%);
-          mask-image:radial-gradient(ellipse 80% 70% at 70% 40%, #000 0%, transparent 75%);
-}
-#hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(100deg, rgba(8,49,85,.92) 0%, rgba(8,49,85,.72) 42%, rgba(13,76,131,.45) 100%);}
 #hero .container{position:relative;z-index:2;}
 #hero .hero-shield{z-index:1;}
 
@@ -767,5 +757,4 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 }
 @media(max-width:700px){
   .bg-photo::before{opacity:.14;}
-  #hero .hero-photo{opacity:.2;}
 }
