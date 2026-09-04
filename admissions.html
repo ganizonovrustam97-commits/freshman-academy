@@ -7,38 +7,35 @@
 <link rel="stylesheet" href="assets/styles.css"/>
 
 <nav id="navbar">
-  <div class="container nav-inner">
-    <a href="index.html" class="brand">
-      <span class="brand-badge"></span>
-      <span class="brand-word">Freshman Academy<span>Admissions · Research · SAT/AP</span></span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="admissions.html" class="active">Admissions Program</a></li>
-      <li><a href="full-support.html">Full Support</a></li>
-      <li><a href="research.html">Research Institute</a></li>
-      <li><a href="sat-ap.html">SAT & AP</a></li>
-      <li><a href="support.html">Сопровождение</a></li>
-      <li><a href="results.html">Результаты</a></li>
-      <li><a href="builder.html">Конструктор</a></li>
-    </ul>
-    <div class="nav-cta">
-      <a href="#contact" class="btn btn-navy">Записаться</a>
-      <button class="hamburger" id="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+  <div class="nav-split">
+    <div class="nav-group nav-left">
+      <a href="admissions.html" class="np active">Admissions</a>
+      <a href="full-support.html" class="np">Full Support</a>
+      <a href="research.html" class="np">Research<span class="np-new">NEW</span></a>
+      <a href="sat-ap.html" class="np">SAT & AP</a>
     </div>
+    <a class="nav-logo" href="index.html" aria-label="Freshman Academy"><span class="nav-shield"></span></a>
+    <div class="nav-group nav-right">
+      <a href="support.html" class="np">Сопровождение</a>
+      <a href="results.html" class="np">Результаты</a>
+      <a href="builder.html" class="np">Конструктор</a>
+      <a href="#contact" class="np">Контакты</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
   <button id="mobileClose" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;font-size:2rem;cursor:pointer;color:#fff;">&#215;</button>
   <a href="index.html" onclick="closeMobileMenu()">Главная</a>
-  <a href="admissions.html" onclick="closeMobileMenu()">Admissions Program</a>
+  <a href="admissions.html" onclick="closeMobileMenu()">Admissions</a>
   <a href="full-support.html" onclick="closeMobileMenu()">Full Support</a>
-  <a href="research.html" onclick="closeMobileMenu()">Research Institute</a>
+  <a href="research.html" onclick="closeMobileMenu()">Research</a>
   <a href="sat-ap.html" onclick="closeMobileMenu()">SAT & AP</a>
   <a href="support.html" onclick="closeMobileMenu()">Сопровождение</a>
   <a href="results.html" onclick="closeMobileMenu()">Результаты</a>
   <a href="builder.html" onclick="closeMobileMenu()">Конструктор</a>
+  <a href="#contact" onclick="closeMobileMenu()">Контакты</a>
   <a href="#contact" class="btn btn-gold" onclick="closeMobileMenu()">Записаться</a>
 </div>
 
@@ -134,19 +131,19 @@
     </div>
     <div class="bio-grid">
       <div class="bio-card fade-up">
-        <div class="teacher-photo"><div class="teacher-initials">Л</div></div>
+        <div class="bio-photo"><img src="media/team/lyusyena.jpg" alt="Dr. Lyusyena Kirakosyan" loading="lazy"/></div>
         <h3>Dr. Lyusyena Kirakosyan</h3>
         <div class="bio-role">Virginia Tech Professor</div>
         <p>Senior Project Associate в Virginia Tech Institute for Policy and Governance, многолетний admissions-консультант. Ведёт занятия, направляет research-проекты и проводит личные встречи со студентами.</p>
       </div>
       <div class="bio-card fade-up d1">
-        <div class="teacher-photo"><div class="teacher-initials">T</div></div>
+        <div class="bio-photo"><img src="media/team/tyler.jpg" alt="Tyler Hallett" loading="lazy"/></div>
         <h3>Tyler Hallett</h3>
         <div class="bio-role">Admissions Expert</div>
         <p>14 лет опыта в admissions-консультировании, бакалавриат University of Minnesota, аспирантский курс Creative Nonfiction в UCLA. Студенты Тайлера поступали в MIT, Harvard, Yale, Stanford, UPenn, Brown, Duke, Cornell, UChicago и другие вузы.</p>
       </div>
       <div class="bio-card fade-up d2">
-        <div class="teacher-photo"><div class="teacher-initials">V</div></div>
+        <div class="bio-photo"><img src="media/team/valera.jpg" alt="Valera Arakelyan" loading="lazy"/></div>
         <h3>Valera Arakelyan</h3>
         <div class="bio-role">Yale-NUS Graduate</div>
         <p>Выпускник Yale-NUS (философия, политика, экономика), прошёл Grand Strategy Program в Yale University. Задаёт стратегическое направление заявки, проводит ежемесячные личные check-in и подключает свою академическую и профессиональную сеть.</p>
