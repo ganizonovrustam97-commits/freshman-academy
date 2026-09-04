@@ -705,3 +705,6 @@ footer .brand-badge{background-image:url('data:image/png;base64,iVBORw0KGgoAAAAN
   .nav-logo{margin:0;}
   .hamburger{display:flex;}
 }
+
+/* Burger only where the pill nav is hidden */
+@media(min-width:901px){#navbar .hamburger{display:none;}}
