@@ -758,3 +758,32 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 @media(max-width:700px){
   .bg-photo::before{opacity:.14;}
 }
+
+/* Why Research */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-bottom:3.4rem;}
+.why-card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--border);border-radius:16px;padding:2rem 2rem 1.8rem;}
+.why-num{position:absolute;top:.6rem;right:1.1rem;font-family:var(--serif);font-size:4.6rem;font-weight:700;line-height:1;color:var(--navy);opacity:.09;}
+.why-card h3{font-size:1.18rem;margin-bottom:.7rem;position:relative;}
+.why-card p{font-size:.92rem;color:var(--muted);position:relative;}
+/* Process */
+.proc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-bottom:3.4rem;}
+.proc-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1.9rem;}
+.proc-step{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-pale);padding:.3rem .75rem;border-radius:100px;margin-bottom:1rem;}
+.proc-card h3{font-size:1.2rem;margin-bottom:.6rem;}
+.proc-card p{font-size:.92rem;color:var(--muted);}
+.proc-card.hi{background:linear-gradient(150deg,var(--gold),var(--gold-dark));border-color:transparent;}
+.proc-card.hi h3,.proc-card.hi p{color:#fff;}
+.proc-card.hi .proc-step{background:rgba(255,255,255,.25);color:#fff;}
+.proc-card.dark{background:linear-gradient(150deg,var(--navy),var(--navy-dark));border-color:transparent;}
+.proc-card.dark h3{color:#fff;}
+.proc-card.dark p{color:rgba(255,255,255,.8);}
+.proc-card.dark .proc-step{background:rgba(255,255,255,.18);color:#fff;}
+@media(max-width:900px){.why-grid,.proc-grid{grid-template-columns:1fr;}}
+
+/* Testimonials */
+.quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-bottom:3rem;}
+.quote-card{background:#fff;border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 16px 16px 0;padding:1.9rem;}
+.quote-card p{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--navy-dark);line-height:1.65;margin-bottom:1.2rem;}
+.quote-author{font-size:.88rem;font-weight:700;color:var(--navy);}
+.quote-author span{display:block;font-weight:500;font-size:.8rem;color:var(--gold-dark);margin-top:.15rem;}
+@media(max-width:900px){.quote-grid{grid-template-columns:1fr;}}
