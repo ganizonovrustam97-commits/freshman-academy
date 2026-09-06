@@ -1,0 +1,143 @@
+<title>Гранты и стипендии · Freshman Academy</title>
+<meta name="description" content="База стипендий для поступления за рубеж: full ride, государственные гранты, need-based и merit — с покрытием, условиями и дедлайнами."/>
+<link rel="icon" href="logo.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/styles.css"/>
+
+<nav id="navbar">
+  <div class="nav-split">
+    <div class="nav-group nav-left">
+      <a href="countries.html" class="np active">Куда поступать</a>
+      <a href="admissions.html" class="np">Admissions</a>
+      <a href="full-support.html" class="np">Full Support</a>
+      <a href="research.html" class="np active">Research<span class="np-new">NEW</span></a>
+      <a href="sat-ap.html" class="np">SAT & AP</a>
+    </div>
+    <a class="nav-logo" href="index.html" aria-label="Freshman Academy"><span class="nav-shield"></span></a>
+    <div class="nav-group nav-right">
+      <a href="support.html" class="np">Сопровождение</a>
+      <a href="results.html" class="np">Результаты</a>
+      <a href="builder.html" class="np">Конструктор</a>
+      <a href="https://t.me/freshman_academy" target="_blank" rel="noopener" class="np">Контакты</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button id="mobileClose" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;font-size:2rem;cursor:pointer;color:#fff;">&#215;</button>
+  <a href="index.html" onclick="closeMobileMenu()">Главная</a>
+  <a href="countries.html" onclick="closeMobileMenu()">Куда поступать</a>
+  <a href="scholarships.html" onclick="closeMobileMenu()">Гранты</a>
+  <a href="guide.html" onclick="closeMobileMenu()">Как поступать</a>
+  <a href="admissions.html" onclick="closeMobileMenu()">Admissions</a>
+  <a href="full-support.html" onclick="closeMobileMenu()">Full Support</a>
+  <a href="research.html" onclick="closeMobileMenu()">Research</a>
+  <a href="sat-ap.html" onclick="closeMobileMenu()">SAT & AP</a>
+  <a href="support.html" onclick="closeMobileMenu()">Сопровождение</a>
+  <a href="results.html" onclick="closeMobileMenu()">Результаты</a>
+  <a href="builder.html" onclick="closeMobileMenu()">Конструктор</a>
+  <a href="https://t.me/freshman_academy" target="_blank" rel="noopener" onclick="closeMobileMenu()">Контакты</a>
+  <a href="https://t.me/freshman_academy" target="_blank" rel="noopener" class="btn btn-gold" onclick="closeMobileMenu()">Записаться</a>
+</div>
+
+<section class="page-hero bg-photo bg-letters">
+  <div class="container">
+    <div class="crumbs fade-up"><a href="index.html">Главная</a> / Гранты</div>
+    <h1 class="fade-up">Гранты и стипендии</h1>
+    <p class="fade-up d1">Программы, по которым школьник из Узбекистана может закрыть обучение целиком или частично — с покрытием, условиями и дедлайнами.</p>
+    <div class="btn-group fade-up d2" style="justify-content:center;margin-top:1.6rem;">
+      <a href="countries.html" class="btn btn-outline-navy">Страны</a>
+      <a href="scholarships.html" class="btn btn-outline-navy">Гранты</a>
+      <a href="guide.html" class="btn btn-outline-navy">Как поступать</a>
+    </div>
+  </div>
+</section>
+
+<section id="scholarships">
+  <div class="container">
+    <div class="section-header center fade-up" style="margin-left:auto;margin-right:auto;">
+      <div class="label" style="justify-content:center;width:100%;">База программ</div>
+      <div class="gold-line" style="margin-left:auto;margin-right:auto;"></div>
+      <h2>Найдите свою программу</h2>
+      <p>Фильтруйте по типу финансирования или ищите по названию, стране и организации.</p>
+    </div>
+
+    <div class="filter-row fade-up">
+      <button class="gf-btn active" data-sfilter="all">Все</button>
+      <button class="gf-btn" data-sfilter="full-ride">Full ride</button>
+      <button class="gf-btn" data-sfilter="full-tuition">Full tuition</button>
+      <button class="gf-btn" data-sfilter="government">Государственные</button>
+      <button class="gf-btn" data-sfilter="need-based">Need-based</button>
+      <button class="gf-btn" data-sfilter="merit">Merit</button>
+      <button class="gf-btn" data-sfilter="partial">Частичные</button>
+    </div>
+    <div class="f fade-up" style="max-width:420px;margin-bottom:1.4rem;">
+      <input id="schSearch" type="search" placeholder="Поиск: Венгрия, GKS, Vanderbilt…" style="width:100%;padding:.7rem 1rem;border:1px solid var(--border);border-radius:10px;font-family:inherit;font-size:.92rem;"/>
+    </div>
+    <div class="count-note" id="schCount"></div>
+    <div class="sch-grid" id="schGrid"></div>
+  </div>
+</section>
+
+<section id="full-funding" class="alt">
+  <div class="container">
+    <div class="section-header center fade-up" style="margin-left:auto;margin-right:auto;">
+      <div class="label" style="justify-content:center;width:100%;">100% финансирование</div>
+      <div class="gold-line" style="margin-left:auto;margin-right:auto;"></div>
+      <h2>Где реально закрыть всё</h2>
+      <p>Матрица по странам: возможен ли full ride и через какой механизм.</p>
+    </div>
+
+    <div class="cmp-wrap fade-up">
+      <table class="cmp" style="min-width:720px;">
+        <thead><tr><th>Страна</th><th>Full ride</th><th>Механизм</th></tr></thead>
+        <tbody id="ffBody"></tbody>
+      </table>
+    </div>
+
+    <div class="section-header center fade-up" style="margin:3.4rem auto 2rem;">
+      <div class="label" style="justify-content:center;width:100%;">Честно</div>
+      <div class="gold-line" style="margin-left:auto;margin-right:auto;"></div>
+      <h2>Три правды о полном финансировании</h2>
+    </div>
+    <div class="why-grid" id="ffTruths"></div>
+
+    <div class="section-header center fade-up" style="margin:3.4rem auto 2rem;">
+      <div class="label" style="justify-content:center;width:100%;">Ошибки</div>
+      <div class="gold-line" style="margin-left:auto;margin-right:auto;"></div>
+      <h2>Что снижает шансы на грант</h2>
+    </div>
+    <div id="ffMistakes"></div>
+    <div class="research-cta fade-up">
+  <h3>Не уверены, какая страна ваша?</h3>
+  <p>На консультации разбираем профиль студента — оценки, английский, бюджет и сроки — и подбираем маршрут, где шансы и финансирование реальны.</p>
+  <div class="btn-group">
+    <a href="https://t.me/freshman_academy" target="_blank" rel="noopener" class="btn btn-gold">Разобрать профиль</a>
+    <a href="builder.html" class="btn btn-outline">Собрать программу</a>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-badge"></span>
+      <span>Freshman Academy</span>
+    </div>
+    <div class="footer-contacts">
+      <a href="https://t.me/freshman_academy" target="_blank" rel="noopener">Telegram @freshman_academy</a>
+      <a href="https://wa.me/998000000000" target="_blank" rel="noopener">WhatsApp</a>
+      <span>Офлайн (Ташкент) и онлайн</span>
+    </div>
+    <div>© 2026 Freshman Academy · Freshman Pte. Ltd. (202307332W)</div>
+    <div><a href="#navbar">Наверх ↑</a></div>
+  </div>
+</footer>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/guide.js"></script>

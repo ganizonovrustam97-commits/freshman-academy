@@ -787,3 +787,108 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 .quote-author{font-size:.88rem;font-weight:700;color:var(--navy);}
 .quote-author span{display:block;font-weight:500;font-size:.8rem;color:var(--gold-dark);margin-top:.15rem;}
 @media(max-width:900px){.quote-grid{grid-template-columns:1fr;}}
+
+/* ============================================================
+   COUNTRIES / SCHOLARSHIPS / GUIDE — построено на существующих
+   токенах и компонентах сайта
+   ============================================================ */
+.filter-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.4rem;}
+.count-note{font-size:.85rem;color:var(--muted);margin-bottom:1.6rem;}
+
+/* country cards */
+.ctry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
+.ctry-card{display:flex;flex-direction:column;text-align:left;background:#fff;border:1px solid var(--border);border-radius:16px;padding:1.7rem;cursor:pointer;transition:all .25s ease;font:inherit;color:inherit;}
+.ctry-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--gold);}
+.ctry-head{display:flex;align-items:center;gap:.75rem;margin-bottom:.35rem;}
+.ctry-flag{font-size:1.9rem;line-height:1;}
+.ctry-card h3{font-size:1.22rem;margin:0;}
+.ctry-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1.1rem;}
+.ctry-tag{font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .6rem;border-radius:100px;background:var(--navy-pale);color:var(--navy);}
+.ctry-tag.gold{background:var(--gold-pale);color:var(--gold-dark);}
+.ctry-rows{border-top:1px solid var(--border);margin-top:auto;padding-top:.9rem;}
+.ctry-row{display:flex;justify-content:space-between;gap:.8rem;font-size:.84rem;padding:.3rem 0;}
+.ctry-row span{color:var(--muted);flex-shrink:0;}
+.ctry-row b{font-weight:600;text-align:right;}
+.ctry-more{margin-top:1rem;font-size:.82rem;font-weight:700;color:var(--gold-dark);}
+
+/* modal */
+.cm-overlay{display:none;position:fixed;inset:0;z-index:4000;background:rgba(8,17,28,.9);padding:2rem 1rem;overflow-y:auto;}
+.cm-overlay.open{display:block;}
+.cm-doc{background:#fff;border-radius:16px;max-width:940px;width:100%;margin:0 auto;padding:2.6rem;position:relative;}
+.cm-close{position:absolute;top:1rem;right:1.2rem;background:none;border:none;font-size:2rem;line-height:1;cursor:pointer;color:var(--muted);}
+.cm-close:hover{color:var(--navy);}
+.cm-head{display:flex;align-items:center;gap:1rem;margin-bottom:.6rem;}
+.cm-head .ctry-flag{font-size:2.6rem;}
+.cm-head h2{margin:0;font-size:2rem;}
+.cm-sum{color:var(--muted);font-size:.96rem;margin-bottom:1.6rem;}
+.cm-sec{border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;}
+.cm-sec > h3{font-size:1.12rem;margin-bottom:.9rem;display:flex;align-items:center;gap:.6rem;}
+.cm-sec > h3::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+.cm-two{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;}
+.cm-list{list-style:none;margin:0;padding:0;}
+.cm-list li{font-size:.9rem;padding:.4rem 0 .4rem 1.1rem;position:relative;color:var(--text);}
+.cm-list li::before{content:'—';position:absolute;left:0;color:var(--gold);}
+.cm-list.cons li::before{color:var(--muted);}
+.cm-kv{width:100%;border-collapse:collapse;font-size:.88rem;}
+.cm-kv td{padding:.55rem .6rem;border-bottom:1px solid var(--border);vertical-align:top;}
+.cm-kv td:first-child{color:var(--muted);width:38%;}
+.cm-kv tr:last-child td{border-bottom:none;}
+.cm-badge{display:inline-block;font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:.14rem .45rem;border-radius:4px;margin-left:.4rem;vertical-align:middle;}
+.cm-badge.ok{background:rgba(24,140,90,.12);color:#0f7a4c;}
+.cm-badge.check{background:var(--gold-pale);color:var(--gold-dark);}
+.cm-uni{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.5rem;}
+.cm-uni span{font-family:var(--serif);font-size:.86rem;background:var(--bg2);border:1px solid var(--border);padding:.3rem .7rem;border-radius:100px;}
+.cm-callout{background:var(--gold-pale);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:.9rem 1.2rem;font-size:.9rem;margin-top:.9rem;}
+
+/* comparison table */
+.cmp-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:14px;background:#fff;-webkit-overflow-scrolling:touch;}
+.cmp{width:100%;border-collapse:collapse;font-size:.86rem;min-width:940px;}
+.cmp th{background:var(--navy);color:#fff;font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:.9rem .8rem;text-align:left;position:sticky;top:0;}
+.cmp td{padding:.8rem;border-bottom:1px solid var(--border);vertical-align:top;}
+.cmp tr:last-child td{border-bottom:none;}
+.cmp tbody tr:hover{background:var(--bg2);}
+.cmp .c-name{font-weight:600;white-space:nowrap;}
+.cmp-hint{font-size:.8rem;color:var(--muted);margin-top:.7rem;}
+
+/* scholarships */
+.sch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
+.sch-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1.7rem;display:flex;flex-direction:column;transition:all .25s ease;}
+.sch-card:hover{box-shadow:var(--shadow-md);border-color:var(--gold);}
+.sch-top{display:flex;align-items:flex-start;gap:.7rem;margin-bottom:.5rem;}
+.sch-top .ctry-flag{font-size:1.5rem;}
+.sch-card h3{font-size:1.06rem;margin:0 0 .15rem;}
+.sch-org{font-size:.8rem;color:var(--muted);}
+.sch-badges{display:flex;flex-wrap:wrap;gap:.35rem;margin:.8rem 0 1rem;}
+.sch-b{font-size:.63rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:.22rem .55rem;border-radius:4px;background:var(--navy-pale);color:var(--navy);}
+.sch-b.full{background:rgba(24,140,90,.13);color:#0f7a4c;}
+.sch-b.gov{background:var(--gold-pale);color:var(--gold-dark);}
+.sch-kv{font-size:.85rem;border-top:1px solid var(--border);padding-top:.8rem;flex:1;}
+.sch-kv div{padding:.32rem 0;}
+.sch-kv b{color:var(--muted);font-weight:600;font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;display:block;margin-bottom:.1rem;}
+.sch-link{margin-top:1rem;font-size:.83rem;font-weight:700;color:var(--gold-dark);text-decoration:none;}
+.sch-link:hover{text-decoration:underline;}
+.sch-warn{font-size:.8rem;color:var(--muted);background:var(--bg2);border-radius:8px;padding:.6rem .8rem;margin-top:.8rem;}
+
+/* calendar */
+.cal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
+.cal-month{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1.6rem;}
+.cal-month.urgent{border-color:var(--gold);box-shadow:var(--shadow-md);}
+.cal-month h3{font-size:1.1rem;margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem;}
+.cal-item{font-size:.86rem;padding:.55rem 0;border-top:1px solid var(--border);}
+.cal-item b{display:block;font-weight:600;}
+.cal-item span{color:var(--gold-dark);font-weight:600;font-size:.82rem;}
+
+/* profiles */
+.prof-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1.9rem;}
+.prof-card .journey-num{margin-bottom:.6rem;}
+.prof-rec{display:flex;flex-wrap:wrap;gap:.4rem;margin:.9rem 0;}
+.prof-rec span{font-size:.82rem;background:var(--navy-pale);color:var(--navy);padding:.3rem .7rem;border-radius:100px;}
+
+@media(max-width:900px){
+  .ctry-grid,.sch-grid,.cal-grid,.cm-two{grid-template-columns:1fr;}
+  .cm-doc{padding:1.6rem 1.2rem;}
+  .cm-head h2{font-size:1.5rem;}
+}
+@media(min-width:901px) and (max-width:1180px){
+  .ctry-grid,.sch-grid,.cal-grid{grid-template-columns:1fr 1fr;}
+}
