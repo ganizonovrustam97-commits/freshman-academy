@@ -718,6 +718,11 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 #navbar.scrolled .hamburger span{background:var(--navy);}
 .page-hero{padding-top:10rem;}
 
+/* Smooth the hand-off from the hero into the first section below it —
+   otherwise the hero's faint fade meets a hard flat-color block with a
+   huge dead gap in between. */
+.page-hero + section{padding-top:clamp(2.2rem,3.6vw,2.8rem);}
+
 .footer-contacts{display:flex;flex-wrap:wrap;gap:1.2rem;align-items:center;justify-content:center;font-size:.85rem;}
 .footer-contacts a{color:var(--gold);text-decoration:none;font-weight:600;}
 .footer-contacts a:hover{text-decoration:underline;}
