@@ -709,6 +709,13 @@ footer .brand-badge{background-image:url('data:image/png;base64,iVBORw0KGgoAAAAN
 /* Burger only where the pill nav is hidden */
 @media(min-width:901px){#navbar .hamburger{display:none;}}
 
+/* Pin the shield logo to the left edge instead of the center gap
+   between the two pill groups; the groups then flow as one cluster. */
+@media(min-width:901px){
+  #navbar .nav-split{position:relative;}
+  .nav-logo{position:absolute;left:1.5rem;top:50%;transform:translateY(-50%);margin:0;}
+}
+
 /* Nav floats over the page — no hard band above the hero */
 nav{background:transparent;backdrop-filter:none;border-bottom:none;box-shadow:none;}
 nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(247,249,252,0));backdrop-filter:blur(6px);border-bottom:none;box-shadow:none;}
