@@ -1316,3 +1316,30 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
     color-mix(in srgb,var(--p) 90%,#000) 6px,
     color-mix(in srgb,var(--p) 78%,#000) 100%);
 }
+
+/* ============================================================
+   UNIVERSITY MARKS ON THE OFFER CARDS
+   Client-supplied logo files, placed as-is. Columbia has no file
+   yet and falls back to an initial on its own colour.
+   ============================================================ */
+.ru-head{display:flex;align-items:center;gap:.85rem;margin-bottom:.2rem;}
+.ru-logo{
+  width:54px;height:54px;flex-shrink:0;border-radius:12px;
+  background-position:center;background-size:cover;background-repeat:no-repeat;
+  box-shadow:0 2px 9px rgba(13,49,85,.18);
+}
+.ru-logo.fallback{
+  display:flex;align-items:center;justify-content:center;
+  background:var(--uni,var(--navy));
+  color:#fff;font-family:var(--serif);font-size:1.75rem;font-weight:700;line-height:1;
+}
+.results-grid .result-card .ru-tag{margin-bottom:0;}
+.results-grid .result-card .ru-uni{margin-top:.85rem;}
+
+.ru-logo.l-harvard {background-image:url('../media/logos/harvard.png');}
+.ru-logo.l-duke    {background-image:url('../media/logos/duke.png');box-shadow:0 2px 9px rgba(13,49,85,.12);}
+.ru-logo.l-stanford{background-image:url('../media/logos/stanford.png');}
+.ru-logo.l-cornell {background-image:url('../media/logos/cornell.png');}
+.ru-logo.l-penn    {background-image:url('../media/logos/wharton.png');}
+
+@media(max-width:600px){.ru-logo{width:46px;height:46px;}}
