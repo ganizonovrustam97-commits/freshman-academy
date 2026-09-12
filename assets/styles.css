@@ -1341,5 +1341,6 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 .ru-logo.l-stanford{background-image:url('../media/logos/stanford.png');}
 .ru-logo.l-cornell {background-image:url('../media/logos/cornell.png');}
 .ru-logo.l-penn    {background-image:url('../media/logos/wharton.png');}
+.ru-logo.l-columbia{background-image:url('../media/logos/columbia.png');}
 
 @media(max-width:600px){.ru-logo{width:46px;height:46px;}}
