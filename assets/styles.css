@@ -14,7 +14,7 @@
   --bg2:         #F5F6F8;
   --border:      #E4E7EC;
   --text:        #14212F;
-  --muted:       #5C6B7A;
+  --muted:       #4A5765;
   --serif:       'Cormorant Garamond', Georgia, serif;
   --sans:        'Inter', system-ui, -apple-system, sans-serif;
   --shadow-sm:   0 2px 10px rgba(13,76,131,0.06);
@@ -1191,7 +1191,7 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 /* ── derived ink: a darkened accent for small coloured text ──
    Recomputed per element from that element's own --uni, so every
    accent keeps enough contrast on its tinted card background. */
-*{--uni-ink:color-mix(in srgb,var(--uni,var(--gold-dark)) 84%,#000);}
+*{--uni-ink:color-mix(in srgb,var(--uni,var(--gold-dark)) 76%,#000);}
 
 .support-card .sc-hours,
 .support-card .label,
@@ -1220,3 +1220,99 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 
 /* the scaled campus photo must not push the page 8px wide on mobile */
 .bg-photo{overflow:hidden;}
+
+/* ============================================================
+   CAMPUS PHOTOGRAPHY, PART TWO
+   Photos now sit behind in-page sections too. The veil that keeps
+   text readable takes the section's own tint, so the colour survives.
+   ============================================================ */
+:root{--photo-veil:255,255,255;}
+.tint-cream{--photo-veil:253,246,234;}
+.tint-sky  {--photo-veil:237,244,252;}
+.tint-mint {--photo-veil:235,246,240;}
+.tint-blush{--photo-veil:252,240,240;}
+.tint-lilac{--photo-veil:244,240,250;}
+
+.bg-photo::after{
+  background:linear-gradient(180deg,
+    rgba(var(--photo-veil),.84) 0%,
+    rgba(var(--photo-veil),.70) 45%,
+    rgba(var(--photo-veil),.93) 100%);
+}
+/* quieter treatment where a photo sits behind a long content section */
+.bg-soft::before{opacity:.38;filter:saturate(1.2);}
+.bg-soft::after{
+  background:linear-gradient(180deg,
+    rgba(var(--photo-veil),.84) 0%,
+    rgba(var(--photo-veil),.74) 42%,
+    rgba(var(--photo-veil),.90) 100%);
+}
+@media(max-width:700px){.bg-soft::before{opacity:.24;}}
+
+.bg-yale::before       {background-image:url('../media/bg/yale.jpg');background-position:center 38%;}
+.bg-pennants::before   {background-image:url('../media/bg/pennants.jpg');background-position:center 45%;}
+.bg-mitday::before     {background-image:url('../media/bg/mit-day.jpg');background-position:center 42%;}
+.bg-stanfordbox::before{background-image:url('../media/bg/stanford-box.jpg');background-position:center 40%;}
+.bg-brochures::before  {background-image:url('../media/bg/brochures.jpg');background-position:center 45%;}
+.bg-folders::before    {background-image:url('../media/bg/folders.jpg');background-position:center 50%;}
+
+/* a campus behind the dark achievements banner */
+.achv{isolation:isolate;}
+.achv::after{
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:url('../media/bg/stanford.jpg') center 38%/cover no-repeat;
+  opacity:.30;filter:saturate(1.15) brightness(.38);
+}
+/* the banner's own labels have to win over the photo */
+.achv-item span{color:rgba(255,255,255,.78);}
+
+/* ============================================================
+   PENNANTS
+   Where the site names the universities students got into, the
+   names fly as pennants in each school's colours — the shape and
+   type are ours; no crests, emblems or wordmarks are reproduced.
+   ============================================================ */
+.pennant{
+  --p:var(--uni,var(--navy));
+  position:relative;display:inline-flex;align-items:center;
+  padding:.5rem 1.85rem .5rem 1rem;
+  font-family:var(--serif);font-size:.92rem;font-weight:600;
+  letter-spacing:.03em;line-height:1.15;white-space:nowrap;color:#fff;
+  background:var(--p);
+  background:linear-gradient(90deg,
+    color-mix(in srgb,var(--p) 56%,#000) 0 6px,
+    color-mix(in srgb,var(--p) 90%,#000) 6px,
+    color-mix(in srgb,var(--p) 78%,#000) 100%);
+  -webkit-clip-path:polygon(0 0,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,0 100%);
+          clip-path:polygon(0 0,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,0 100%);
+  filter:drop-shadow(0 2px 5px rgba(8,17,28,.28));
+  transition:transform .22s ease;
+}
+.pennant:hover{transform:translateX(3px);}
+
+/* the strip on the dark About panel */
+.results-strip-list{gap:.45rem .5rem;}
+.results-strip-list .pennant{font-size:.86rem;padding:.4rem 2.2rem .4rem .85rem;}
+
+/* the university row above the builder's ready-made packages */
+.support-uni-tags{gap:.5rem .55rem;}
+.support-uni-tags .pennant:nth-child(6n+1){--uni:var(--acc-1);}
+.support-uni-tags .pennant:nth-child(6n+2){--uni:var(--acc-4);}
+.support-uni-tags .pennant:nth-child(6n+3){--uni:var(--acc-6);}
+.support-uni-tags .pennant:nth-child(6n+4){--uni:var(--acc-5);}
+.support-uni-tags .pennant:nth-child(6n+5){--uni:var(--acc-3);}
+.support-uni-tags .pennant:nth-child(6n+6){--uni:var(--acc-2);}
+
+@media(max-width:600px){
+  .pennant{font-size:.8rem;padding:.38rem 2rem .38rem .75rem;}
+}
+
+/* the old pill styling for this row must not outrank the pennant */
+.support-uni-tags span.pennant{
+  color:#fff;border:none;border-radius:0;
+  padding:.5rem 1.85rem .5rem 1rem;
+  background:linear-gradient(90deg,
+    color-mix(in srgb,var(--p) 56%,#000) 0 6px,
+    color-mix(in srgb,var(--p) 90%,#000) 6px,
+    color-mix(in srgb,var(--p) 78%,#000) 100%);
+}
