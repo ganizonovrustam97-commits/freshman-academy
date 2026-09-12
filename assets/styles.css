@@ -7,7 +7,7 @@
   --navy-dark:   #083155;
   --navy-pale:   rgba(13,76,131,0.06);
   --gold:        #FF9300;
-  --gold-dark:   #CC7600;
+  --gold-dark:   #A15C00;
   --gold-pale:   rgba(255,147,0,0.12);
   --white:       #ffffff;
   --bg:          #ffffff;
@@ -904,3 +904,319 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 @media(min-width:901px) and (max-width:1180px){
   .ctry-grid,.sch-grid,.cal-grid{grid-template-columns:1fr 1fr;}
 }
+
+/* ============================================================
+   COLOUR SYSTEM — university palette
+   Brings brand colour to every page below the homepage hero.
+   `--uni` is the single accent variable: set it on a section and
+   everything inside picks it up; set it on a card and that card wins.
+   ============================================================ */
+:root{
+  /* university brand accents */
+  --u-harvard:#A51C30;
+  --u-yale:#00356B;
+  --u-princeton:#E77500;
+  --u-columbia:#1261A0;
+  --u-penn:#95001A;
+  --u-brown:#5C4033;
+  --u-dartmouth:#00693E;
+  --u-cornell:#B31B1B;
+  --u-stanford:#8C1515;
+  --u-mit:#8A1626;
+  --u-duke:#0B2F8A;
+  --u-nyu:#57068C;
+  --u-bu:#CC0000;
+  --u-colby:#00558C;
+  --u-richmond:#00693C;
+
+  /* rotating accent set */
+  --acc-1:#0B5FA5;  /* blue    */
+  --acc-2:#B26A00;  /* amber   */
+  --acc-3:#0E8074;  /* teal    */
+  --acc-4:#A51C30;  /* crimson */
+  --acc-5:#5B2C86;  /* violet  */
+  --acc-6:#00693E;  /* green   */
+
+  /* section tints */
+  --tint-cream:#FDF6EA;
+  --tint-sky:#EDF4FC;
+  --tint-mint:#EBF6F0;
+  --tint-blush:#FCF0F0;
+  --tint-lilac:#F4F0FA;
+}
+
+/* ── tinted section backgrounds ───────────────────────────── */
+.tint-cream{background:var(--tint-cream);--uni:var(--acc-2);}
+.tint-sky  {background:var(--tint-sky);  --uni:var(--acc-1);}
+.tint-mint {background:var(--tint-mint); --uni:var(--acc-3);}
+.tint-blush{background:var(--tint-blush);--uni:var(--acc-4);}
+.tint-lilac{background:var(--tint-lilac);--uni:var(--acc-5);}
+.alt.tint-cream,.alt.tint-sky,.alt.tint-mint,.alt.tint-blush,.alt.tint-lilac{background-color:inherit;}
+.alt.tint-cream{background:var(--tint-cream);}
+.alt.tint-sky  {background:var(--tint-sky);}
+.alt.tint-mint {background:var(--tint-mint);}
+.alt.tint-blush{background:var(--tint-blush);}
+.alt.tint-lilac{background:var(--tint-lilac);}
+
+/* accent utilities */
+.acc-blue{--uni:var(--acc-1);}
+.acc-amber{--uni:var(--acc-2);}
+.acc-teal{--uni:var(--acc-3);}
+.acc-crimson{--uni:var(--acc-4);}
+.acc-violet{--uni:var(--acc-5);}
+.acc-green{--uni:var(--acc-6);}
+
+/* university utilities */
+.u-harvard{--uni:var(--u-harvard);}
+.u-yale{--uni:var(--u-yale);}
+.u-princeton{--uni:var(--u-princeton);}
+.u-columbia{--uni:var(--u-columbia);}
+.u-penn{--uni:var(--u-penn);}
+.u-brown{--uni:var(--u-brown);}
+.u-dartmouth{--uni:var(--u-dartmouth);}
+.u-cornell{--uni:var(--u-cornell);}
+.u-stanford{--uni:var(--u-stanford);}
+.u-mit{--uni:var(--u-mit);}
+.u-duke{--uni:var(--u-duke);}
+.u-nyu{--uni:var(--u-nyu);}
+.u-bu{--uni:var(--u-bu);}
+.u-colby{--uni:var(--u-colby);}
+.u-richmond{--uni:var(--u-richmond);}
+
+/* ── section headers take the section's hue ───────────────── */
+.section-header .label,.about-copy .label{color:var(--gold-dark);color:var(--uni,var(--gold-dark));}
+.gold-line{background:var(--gold);background:var(--uni,var(--gold));}
+
+/* ── result / offer cards, coloured per university ────────── */
+.results-grid .result-card{
+  background:#fff;
+  background:linear-gradient(180deg,color-mix(in srgb,var(--uni,var(--gold)) 9%,#fff) 0%,#fff 48%);
+  position:relative;overflow:hidden;border-radius:14px;
+}
+.results-grid .result-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:5px;
+  background:var(--gold);background:var(--uni,var(--gold));
+}
+.results-grid .result-card .ru-tag{
+  display:inline-block;margin-bottom:.15rem;padding:.3rem .72rem;border-radius:100px;
+  color:var(--gold-dark);color:var(--uni,var(--gold-dark));
+  background:var(--gold-pale);
+  background:color-mix(in srgb,var(--uni,var(--gold)) 13%,#fff);
+  border:1px solid color-mix(in srgb,var(--uni,var(--gold)) 26%,#fff);
+}
+.results-grid .result-card .ru-uni{color:var(--navy);color:var(--uni,var(--navy));}
+.results-grid .result-card:hover{
+  border-color:var(--uni,var(--gold));
+  box-shadow:0 18px 46px color-mix(in srgb,var(--uni,var(--navy)) 26%,transparent);
+}
+
+/* ── university chips on the dark About panel ─────────────── */
+.results-strip-list span{
+  background:color-mix(in srgb,var(--uni,#fff) 32%,transparent);
+  border-color:color-mix(in srgb,var(--uni,#fff) 62%,transparent);
+}
+
+/* ── achievement banner: a different hue per number ───────── */
+.achv-item:nth-child(1) strong{color:var(--gold);}
+.achv-item:nth-child(2) strong{color:#8FC7EF;}
+.achv-item:nth-child(3) strong{color:#7FD3A8;}
+.achv-item:nth-child(4) strong{color:#F5A98B;}
+
+/* ── the three step cards ─────────────────────────────────── */
+.prog-grid .prog-card:nth-child(1){--uni:var(--acc-1);}
+.prog-grid .prog-card:nth-child(2){--uni:var(--acc-2);}
+.prog-grid .prog-card:nth-child(3){--uni:var(--acc-6);}
+.prog-card{position:relative;overflow:hidden;}
+.prog-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:5px;
+  background:var(--gold);background:var(--uni,var(--gold));
+}
+.prog-card .label{
+  display:inline-flex;padding:.3rem .72rem;border-radius:100px;
+  color:var(--gold-dark);color:var(--uni,var(--gold-dark));
+  background:var(--gold-pale);
+  background:color-mix(in srgb,var(--uni,var(--gold)) 13%,#fff);
+}
+.prog-card h3{color:var(--navy);color:var(--uni,var(--navy));}
+.prog-card .prog-meta .arrow{color:var(--gold);color:var(--uni,var(--gold));}
+.prog-card:hover{
+  border-color:var(--uni,var(--gold));
+  box-shadow:0 18px 46px color-mix(in srgb,var(--uni,var(--navy)) 24%,transparent);
+}
+
+/* ── country cards, coloured by region ────────────────────── */
+.ctry-card[data-region="usa"]   {--uni:var(--u-harvard);}
+.ctry-card[data-region="canada"]{--uni:#D52B1E;}
+.ctry-card[data-region="uk"]    {--uni:var(--acc-5);}
+.ctry-card[data-region="europe"]{--uni:var(--acc-1);}
+.ctry-card[data-region="asia"]  {--uni:var(--acc-3);}
+.ctry-card{position:relative;overflow:hidden;}
+.ctry-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:var(--gold);background:var(--uni,var(--gold));
+}
+.ctry-card h3{color:var(--navy);color:var(--uni,var(--navy));}
+.ctry-card .ctry-more{color:var(--gold-dark);color:var(--uni,var(--gold-dark));}
+.ctry-card .ctry-tag:not(.gold){
+  background:var(--navy-pale);
+  background:color-mix(in srgb,var(--uni,var(--navy)) 11%,#fff);
+  color:var(--navy);color:var(--uni,var(--navy));
+}
+.ctry-card:hover{
+  border-color:var(--uni,var(--gold));
+  box-shadow:0 16px 42px color-mix(in srgb,var(--uni,var(--navy)) 24%,transparent);
+}
+
+/* ── filter chips inherit the colour of what they filter ──── */
+.gf-btn{--uni:var(--navy);}
+.gf-btn[data-cfilter="usa"]{--uni:var(--u-harvard);}
+.gf-btn[data-cfilter="canada"]{--uni:#D52B1E;}
+.gf-btn[data-cfilter="uk"]{--uni:var(--acc-5);}
+.gf-btn[data-cfilter="europe"]{--uni:var(--acc-1);}
+.gf-btn[data-cfilter="asia"]{--uni:var(--acc-3);}
+.gf-btn[data-cfilter="scholarships"]{--uni:var(--acc-6);}
+.gf-btn[data-cfilter="easier"]{--uni:var(--acc-2);}
+.gf-btn[data-cfilter="value"]{--uni:var(--u-brown);}
+.gf-btn[data-sfilter="full-ride"]{--uni:var(--acc-6);}
+.gf-btn[data-sfilter="full-tuition"]{--uni:var(--acc-3);}
+.gf-btn[data-sfilter="government"]{--uni:var(--acc-1);}
+.gf-btn[data-sfilter="need-based"]{--uni:var(--acc-5);}
+.gf-btn[data-sfilter="merit"]{--uni:var(--acc-2);}
+.gf-btn[data-sfilter="partial"]{--uni:var(--u-brown);}
+.gf-btn[data-filter="results"]{--uni:var(--acc-1);}
+.gf-btn[data-filter="video"]{--uni:var(--acc-4);}
+.gf-btn:hover{border-color:var(--uni);color:var(--uni);background:color-mix(in srgb,var(--uni) 8%,#fff);}
+.gf-btn.active{background:var(--uni);border-color:var(--uni);color:#fff;}
+
+/* ── comparison table ─────────────────────────────────────── */
+.cmp th{background:linear-gradient(90deg,var(--navy-dark),var(--navy));}
+.cmp tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--acc-1) 4%,#fff);}
+.cmp tbody tr:hover td{background:var(--tint-cream);}
+
+/* ── package cards on the builder ─────────────────────────── */
+.support-card{position:relative;}
+.support-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:5px;border-radius:14px 14px 0 0;
+  background:var(--gold);background:var(--uni,var(--gold));
+}
+.support-card .label{
+  display:inline-flex;padding:.3rem .72rem;border-radius:100px;
+  color:var(--gold-dark);color:var(--uni,var(--gold-dark));
+  background:var(--gold-pale);
+  background:color-mix(in srgb,var(--uni,var(--gold)) 13%,#fff);
+}
+.support-card h3{color:var(--navy);color:var(--uni,var(--navy));}
+.support-card .sc-hours{color:var(--gold-dark);color:var(--uni,var(--gold-dark));}
+.support-card:hover{
+  border-color:var(--uni,var(--gold));
+  box-shadow:0 18px 46px color-mix(in srgb,var(--uni,var(--navy)) 22%,transparent);
+}
+.support-card.hi{
+  background:linear-gradient(180deg,color-mix(in srgb,var(--uni,var(--gold)) 13%,#fff),transparent 42%);
+  border-color:color-mix(in srgb,var(--uni,var(--gold)) 45%,#fff);
+}
+.support-card.hi::before{background:var(--uni,var(--gold));color:#fff;}
+
+/* ── scholarship cards cycle through the accent set ───────── */
+.sch-grid .sch-card:nth-child(6n+1){--uni:var(--acc-1);}
+.sch-grid .sch-card:nth-child(6n+2){--uni:var(--acc-6);}
+.sch-grid .sch-card:nth-child(6n+3){--uni:var(--acc-2);}
+.sch-grid .sch-card:nth-child(6n+4){--uni:var(--acc-5);}
+.sch-grid .sch-card:nth-child(6n+5){--uni:var(--acc-3);}
+.sch-grid .sch-card:nth-child(6n+6){--uni:var(--acc-4);}
+.sch-card{position:relative;overflow:hidden;}
+.sch-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:var(--gold);background:var(--uni,var(--gold));
+}
+.sch-card h3{color:var(--navy);color:var(--uni,var(--navy));}
+.sch-card .sch-link{color:var(--gold-dark);color:var(--uni,var(--gold-dark));}
+.sch-card:hover{border-color:var(--uni,var(--gold));box-shadow:0 16px 40px color-mix(in srgb,var(--uni,var(--navy)) 22%,transparent);}
+
+/* ── numbered lists and why-cards cycle too ───────────────── */
+.journey-grid .journey-step:nth-child(3n+1) .journey-num,
+.research-steps .research-step:nth-child(3n+1) .journey-num{color:var(--acc-1);}
+.journey-grid .journey-step:nth-child(3n+2) .journey-num,
+.research-steps .research-step:nth-child(3n+2) .journey-num{color:var(--acc-2);}
+.journey-grid .journey-step:nth-child(3n+3) .journey-num,
+.research-steps .research-step:nth-child(3n+3) .journey-num{color:var(--acc-3);}
+.why-grid .why-card:nth-child(3n+1){--uni:var(--acc-1);}
+.why-grid .why-card:nth-child(3n+2){--uni:var(--acc-2);}
+.why-grid .why-card:nth-child(3n+3){--uni:var(--acc-6);}
+.why-card{position:relative;overflow:hidden;}
+.why-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:var(--gold);background:var(--uni,var(--gold));
+}
+.why-card .why-num{color:var(--navy);color:var(--uni,var(--navy));opacity:.14;}
+.why-card h3{color:var(--navy);color:var(--uni,var(--navy));}
+
+/* ── research cases ───────────────────────────────────────── */
+.research-case{--uni:var(--acc-1);}
+.research-case:nth-child(even){--uni:var(--acc-6);}
+.research-badge{
+  color:var(--gold-dark);color:var(--uni,var(--gold-dark));
+  background:var(--gold-pale);
+  background:color-mix(in srgb,var(--uni,var(--gold)) 13%,#fff);
+}
+.research-body blockquote{
+  border-left-color:var(--uni,var(--gold));
+  background:var(--gold-pale);
+  background:color-mix(in srgb,var(--uni,var(--gold)) 8%,#fff);
+}
+.research-avatar{background:linear-gradient(150deg,var(--uni,var(--navy)),var(--navy-dark));}
+.research-avatar span{color:#fff;}
+
+/* ── FAQ ──────────────────────────────────────────────────── */
+.faq-plus{color:var(--uni,var(--gold-dark));}
+.faq-item.open .faq-plus{background:var(--uni,var(--navy));border-color:var(--uni,var(--navy));}
+
+/* ── campus photography: let the colour through ───────────── */
+.bg-photo::before{
+  opacity:.34;
+  filter:saturate(1.2) contrast(1.02);
+}
+.bg-photo::after{
+  background:linear-gradient(180deg,
+    color-mix(in srgb,var(--uni,var(--navy)) 5%,rgba(255,255,255,.80)) 0%,
+    color-mix(in srgb,var(--uni,var(--navy)) 7%,rgba(255,255,255,.62)) 45%,
+    rgba(255,255,255,.92) 100%);
+}
+@media(max-width:700px){.bg-photo::before{opacity:.22;}}
+
+/* inner-page heroes carry their page's hue */
+.page-hero{background:linear-gradient(180deg,color-mix(in srgb,var(--uni,var(--navy)) 9%,#fff),transparent);}
+.page-hero .crumbs a{color:var(--uni,var(--navy));}
+
+/* ── derived ink: a darkened accent for small coloured text ──
+   Recomputed per element from that element's own --uni, so every
+   accent keeps enough contrast on its tinted card background. */
+*{--uni-ink:color-mix(in srgb,var(--uni,var(--gold-dark)) 84%,#000);}
+
+.support-card .sc-hours,
+.support-card .label,
+.prog-card .label,
+.results-grid .result-card .ru-tag,
+.research-badge,
+.ctry-card .ctry-more,
+.ctry-card .ctry-tag:not(.gold),
+.sch-card .sch-link{color:var(--uni-ink,var(--gold-dark));}
+
+.support-card.hi::before{
+  background:color-mix(in srgb,var(--uni,var(--gold)) 78%,#111);
+  color:#fff;
+}
+
+/* Accent text always uses the darkened ink so every hue clears AA
+   on its own tinted background; raw --uni stays for fills and rules. */
+.section-header .label,.about-copy .label,
+.prog-card h3,.support-card h3,.sch-card h3,
+.ctry-card h3,.why-card h3,
+.results-grid .result-card .ru-uni{color:var(--uni-ink,var(--navy));}
+
+/* filter chips carry a hint of their colour at rest too */
+.gf-btn{color:var(--uni-ink,var(--text));border-color:color-mix(in srgb,var(--uni,var(--border)) 32%,#fff);}
+.gf-btn.active{color:#fff;}
+
+/* the scaled campus photo must not push the page 8px wide on mobile */
+.bg-photo{overflow:hidden;}
