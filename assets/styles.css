@@ -1,4 +1,3 @@
-
 /* ============================================================
    FRESHMAN ACADEMY — root tokens
    ============================================================ */
@@ -1366,8 +1365,8 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 }
 
 .freshmatch-grid{
-  display:grid;grid-template-columns:repeat(4, 90px);gap:1.2rem;
-  width:360px;height:360px;align-content:center;justify-content:center;
+  display:grid;grid-template-columns:repeat(3, 90px);gap:1.2rem;
+  width:360px;height:auto;align-content:center;justify-content:center;
   margin:0 auto;position:relative;
 }
 .freshmatch-logo{
@@ -1416,15 +1415,16 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 }
 
 @media(max-width:900px){
-  .freshmatch-grid{grid-template-columns:repeat(3, 70px);width:270px;height:270px;gap:.9rem;}
+  .freshmatch-grid{grid-template-columns:repeat(3, 70px);width:270px;height:auto;gap:.9rem;}
   .freshmatch-logo{width:70px;height:70px;border-radius:10px;}
   .freshmatch-container{gap:2rem;flex-direction:column;}
   .freshmatch-content{text-align:center;}
 }
 @media(max-width:600px){
   .freshmatch-section{padding:4rem 0;}
-  .freshmatch-grid{grid-template-columns:repeat(3, 60px);width:220px;height:220px;gap:.8rem;}
+  .freshmatch-grid{grid-template-columns:repeat(3, 60px);width:220px;height:auto;gap:.8rem;}
   .freshmatch-logo{width:60px;height:60px;border-radius:8px;}
+
   .freshmatch-title{font-size:1.8rem;}
   .freshmatch-desc{font-size:.95rem;}
 }
