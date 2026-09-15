@@ -1364,6 +1364,7 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
   max-width:800px;margin:0 auto;text-align:center;
   color:#fff;
 }
+.freshmatch-content p{color:#ffffff !important;}
 .freshmatch-label{
   font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
   color:var(--gold);margin-bottom:1.5rem;font-weight:700;
@@ -1374,8 +1375,12 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 }
 .freshmatch-title em{color:var(--gold);font-style:italic;font-weight:600;}
 .freshmatch-desc{
-  font-size:1.1rem;color:#fff;
+  font-size:1.1rem;color:#ffffff !important;font-weight:600;
   margin-bottom:2.5rem;line-height:1.8;
+  text-shadow:0 2px 8px rgba(0,0,0,.5);
+  background:rgba(0,0,0,.2);
+  padding:1.5rem 2rem;
+  border-radius:8px;
 }
 .freshmatch-meta{
   font-size:.92rem;color:rgba(255,255,255,.85);
