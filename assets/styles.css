@@ -1,3 +1,4 @@
+
 /* ============================================================
    FRESHMAN ACADEMY — root tokens
    ============================================================ */
@@ -1357,56 +1358,37 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
   background-image:radial-gradient(circle at 20% 80%, rgba(255,147,0,.08) 0%, transparent 50%);
   pointer-events:none;
 }
-.freshmatch-container{
-  position:relative;z-index:2;
-  display:flex;align-items:center;justify-content:center;gap:3rem;
-  max-width:1460px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4.5rem);
-  flex-wrap:wrap;
-}
-
-.freshmatch-grid{
-  display:grid;grid-template-columns:repeat(3, 90px);gap:1.2rem;
-  width:360px;height:auto;align-content:center;justify-content:center;
-  margin:0 auto;position:relative;
-}
-.freshmatch-logo{
-  width:90px;height:90px;border-radius:14px;background:#fff;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 6px 20px rgba(0,0,0,.15);
-  background-position:center;background-size:contain;background-repeat:no-repeat;
-  background-color:#fff;transition:all .3s ease;cursor:pointer;
-  opacity:0.8;
-}
-.freshmatch-logo:hover{transform:scale(1.08);opacity:1;}
 
 .freshmatch-content{
-  flex:1;min-width:320px;color:#fff;text-align:center;
-  padding:2rem;z-index:10;
+  position:relative;z-index:2;
+  max-width:800px;margin:0 auto;text-align:center;
+  color:#fff;
 }
 .freshmatch-label{
   font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:1rem;font-weight:700;
+  color:var(--gold);margin-bottom:1.5rem;font-weight:700;
 }
 .freshmatch-title{
   font-family:var(--serif);font-size:clamp(2rem, 5vw, 3.2rem);
-  font-weight:600;line-height:1.2;margin:0 0 .8rem 0;letter-spacing:-.01em;
+  font-weight:600;line-height:1.2;margin:0 0 1.2rem 0;letter-spacing:-.01em;
 }
 .freshmatch-title em{color:var(--gold);font-style:italic;font-weight:600;}
 .freshmatch-desc{
-  font-size:1.05rem;color:rgba(255,255,255,.8);
-  margin-bottom:2rem;line-height:1.8;
+  font-size:1.1rem;color:#fff;
+  margin-bottom:2.5rem;line-height:1.8;
 }
 .freshmatch-meta{
-  font-size:.92rem;color:rgba(255,255,255,.7);
+  font-size:.92rem;color:rgba(255,255,255,.85);
+  margin-top:1.5rem;
 }
 
 .freshmatch-btn{
   display:inline-flex;align-items:center;gap:.6rem;
-  padding:1rem 2.2rem;background:var(--gold);
+  padding:1.1rem 2.5rem;background:var(--gold);
   color:var(--navy-dark);font-weight:700;
   text-decoration:none;border-radius:50px;
   font-size:1rem;transition:all .3s ease;
-  margin-top:1.5rem;border:none;cursor:pointer;
+  border:none;cursor:pointer;
   box-shadow:0 8px 24px rgba(255,147,0,.35);
 }
 .freshmatch-btn:hover{
@@ -1415,16 +1397,13 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 }
 
 @media(max-width:900px){
-  .freshmatch-grid{grid-template-columns:repeat(3, 70px);width:270px;height:auto;gap:.9rem;}
-  .freshmatch-logo{width:70px;height:70px;border-radius:10px;}
-  .freshmatch-container{gap:2rem;flex-direction:column;}
-  .freshmatch-content{text-align:center;}
+  .freshmatch-section{padding:5rem 0;}
+  .freshmatch-title{font-size:2rem;}
+  .freshmatch-desc{font-size:1rem;}
 }
 @media(max-width:600px){
   .freshmatch-section{padding:4rem 0;}
-  .freshmatch-grid{grid-template-columns:repeat(3, 60px);width:220px;height:auto;gap:.8rem;}
-  .freshmatch-logo{width:60px;height:60px;border-radius:8px;}
-
   .freshmatch-title{font-size:1.8rem;}
   .freshmatch-desc{font-size:.95rem;}
+  .freshmatch-btn{padding:1rem 2rem;font-size:.95rem;}
 }
