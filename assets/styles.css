@@ -1344,3 +1344,87 @@ nav.scrolled{background:linear-gradient(180deg, rgba(247,249,252,.96) 55%, rgba(
 .ru-logo.l-columbia{background-image:url('../media/logos/columbia.png');}
 
 @media(max-width:600px){.ru-logo{width:46px;height:46px;}}
+
+/* ============================================================
+   FRESHMATCH DIAGNOSTICS SECTION
+   ============================================================ */
+.freshmatch-section{
+  background:linear-gradient(135deg, #0D4C83 0%, #083155 100%);
+  padding:6rem 0;
+  position:relative;overflow:hidden;
+}
+.freshmatch-section::before{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background-image:radial-gradient(circle at 20% 80%, rgba(255,147,0,.08) 0%, transparent 50%);
+  pointer-events:none;
+}
+.freshmatch-container{
+  position:relative;z-index:2;
+  display:flex;align-items:center;justify-content:center;gap:3rem;
+  max-width:1460px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4.5rem);
+  flex-wrap:wrap;
+}
+
+.freshmatch-grid{
+  display:grid;grid-template-columns:repeat(4, 90px);gap:1.2rem;
+  width:360px;height:360px;align-content:center;justify-content:center;
+  margin:0 auto;position:relative;
+}
+.freshmatch-logo{
+  width:90px;height:90px;border-radius:14px;background:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 20px rgba(0,0,0,.15);
+  background-position:center;background-size:contain;background-repeat:no-repeat;
+  background-color:#fff;transition:all .3s ease;cursor:pointer;
+  opacity:0.8;
+}
+.freshmatch-logo:hover{transform:scale(1.08);opacity:1;}
+
+.freshmatch-content{
+  flex:1;min-width:320px;color:#fff;text-align:center;
+  padding:2rem;z-index:10;
+}
+.freshmatch-label{
+  font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1rem;font-weight:700;
+}
+.freshmatch-title{
+  font-family:var(--serif);font-size:clamp(2rem, 5vw, 3.2rem);
+  font-weight:600;line-height:1.2;margin:0 0 .8rem 0;letter-spacing:-.01em;
+}
+.freshmatch-title em{color:var(--gold);font-style:italic;font-weight:600;}
+.freshmatch-desc{
+  font-size:1.05rem;color:rgba(255,255,255,.8);
+  margin-bottom:2rem;line-height:1.8;
+}
+.freshmatch-meta{
+  font-size:.92rem;color:rgba(255,255,255,.7);
+}
+
+.freshmatch-btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:1rem 2.2rem;background:var(--gold);
+  color:var(--navy-dark);font-weight:700;
+  text-decoration:none;border-radius:50px;
+  font-size:1rem;transition:all .3s ease;
+  margin-top:1.5rem;border:none;cursor:pointer;
+  box-shadow:0 8px 24px rgba(255,147,0,.35);
+}
+.freshmatch-btn:hover{
+  background:var(--gold-dark);transform:translateY(-3px);
+  box-shadow:0 12px 32px rgba(255,147,0,.4);
+}
+
+@media(max-width:900px){
+  .freshmatch-grid{grid-template-columns:repeat(3, 70px);width:270px;height:270px;gap:.9rem;}
+  .freshmatch-logo{width:70px;height:70px;border-radius:10px;}
+  .freshmatch-container{gap:2rem;flex-direction:column;}
+  .freshmatch-content{text-align:center;}
+}
+@media(max-width:600px){
+  .freshmatch-section{padding:4rem 0;}
+  .freshmatch-grid{grid-template-columns:repeat(3, 60px);width:220px;height:220px;gap:.8rem;}
+  .freshmatch-logo{width:60px;height:60px;border-radius:8px;}
+  .freshmatch-title{font-size:1.8rem;}
+  .freshmatch-desc{font-size:.95rem;}
+}
